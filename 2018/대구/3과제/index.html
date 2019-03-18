@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>온라인 영수증</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+
+<!-- 선택 내보내기 팝업 -->
+<div class="modal" id="Export">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <section class="modal-card-body">
+            <table class="table is-striped is-narrow is-fullwidth">
+                <!-- 1개 이상 선택
+                <tr>
+                    <td class="has-text-centered">
+                        <span>총 <strong>5</strong>개의 영수증이 선택되었습니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>8886013505181.json <span class="tag is-info">7Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>8805301070460.json <span class="tag is-info">11Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>4005808820221.json <span class="tag is-info">3Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>810005325.json <span class="tag is-info">15Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>9788928312757.json <span class="tag is-info">7Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                -->
+                <!-- 선택 안함 -->
+                <tr>
+                    <td class="has-text-centered">
+                        <strong class="has-text-danger">1개 이상 선택하세요.</strong>
+                    </td>
+                </tr>
+
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <!-- 1개 이상 선택
+            <button class="button is-success is-pulled-right">선택 내보내기</button>
+            -->
+            <!-- 선택 안함 -->
+            <button class="button is-success" disabled>선택 내보내기</button>
+
+        </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<!-- 선택 삭제 팝업 -->
+<div class="modal" id="Delete">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <section class="modal-card-body">
+            <table class="table is-striped is-narrow is-fullwidth">
+                <!-- 1개 이상 선택
+                <tr>
+                    <td class="has-text-centered">
+                        <span>총 <strong>5</strong>개의 영수증이 선택되었습니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>8886013505181.json <span class="tag is-info">7Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>8805301070460.json <span class="tag is-info">11Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>4005808820221.json <span class="tag is-info">3Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>810005325.json <span class="tag is-info">15Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>9788928312757.json <span class="tag is-info">7Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                -->
+                <!-- 선택 안함 -->
+                <tr>
+                    <td class="has-text-centered">
+                        <strong class="has-text-danger">1개 이상 선택하세요.</strong>
+                    </td>
+                </tr>
+
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <!-- 1개 이상 선택
+            <button class="button is-success is-pulled-right">선택 삭제</button>
+            -->
+            <!-- 선택 안함 -->
+            <button class="button is-success" disabled>선택 삭제</button>
+
+        </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<!-- 선택 다운로드 팝업 -->
+<div class="modal" id="Download">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <section class="modal-card-body">
+            <table class="table is-striped is-narrow is-fullwidth">
+                <!-- 1개 이상 선택
+                <tr>
+                    <td class="has-text-centered">
+                        <span>총 <strong>5</strong>개의 영수증이 선택되었습니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>8886013505181.json <span class="tag is-info">7Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>8805301070460.json <span class="tag is-info">11Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>4005808820221.json <span class="tag is-info">3Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>810005325.json <span class="tag is-info">15Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>9788928312757.json <span class="tag is-info">7Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                -->
+                <!-- 선택 안함 -->
+                <tr>
+                    <td class="has-text-centered">
+                        <strong class="has-text-danger">1개 이상 선택하세요.</strong>
+                    </td>
+                </tr>
+
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <div class="field">
+                <input class="is-checkradio" id="radio-png" name="radio-download" type="radio" checked="checked">
+                <label for="radio-png">png</label>
+                <input class="is-checkradio" id="radio-jpg" name="radio-download" type="radio">
+                <label for="radio-jpg">jpg</label>
+            </div>
+            <!-- 1개 이상 선택
+            <button class="button is-success is-pulled-right">선택 다운로드</button>
+            -->
+            <!-- 선택 안함 -->
+            <button class="button is-success is-pulled-right" disabled>선택 다운로드</button>
+
+        </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<!-- 초기화 팝업 -->
+<div class="modal" id="Initialization">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <section class="modal-card-body">
+            <table class="table is-striped is-narrow is-fullwidth">
+                <tr>
+                    <td class="has-text-centered">
+                        <span>총 <strong>21</strong>개의 영수증이 전부 삭제 됩니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="has-text-centered">
+                        <strong class="has-text-danger">정말 초기화 하시겠습니까?</strong>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-danger">초기화</button>
+        </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<!-- 추가 팝업 -->
+<div class="modal" id="Receipt">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <section class="modal-card-body">
+            <table class="table is-striped is-narrow is-fullwidth">
+                <!-- 파일 선택  -->
+                <tr>
+                    <td class="has-text-centered">
+                        <span>파일을 선택하면 여기에 추가됩니다.</span>
+                    </td>
+                </tr>
+
+                <!-- 파일 선택
+                <tr>
+                    <td>
+                        <a>8886013505181.json <span class="tag is-info">7Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>8805301070460.json <span class="tag is-info">11Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>4005808820221.json <span class="tag is-info">3Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a>810005325.json <span class="tag is-info">15Kb</span></a>
+                        <button class="delete is-pulled-right" aria-label="close"></button>
+                    </td>
+                </tr>
+                -->
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button">파일 선택</button>
+            <!-- 파일 선택 안함 -->
+            <button class="button is-success is-pulled-right" disabled>업로드 & 저장</button>
+
+            <!-- 파일 선택
+            <button class="button is-success is-pulled-right">업로드 & 저장</button>
+            -->
+        </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<!-- 다운로드 팝업 -->
+<div class="modal" id="DetailDownload">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <section class="modal-card-body">
+            <table class="table is-striped is-narrow is-fullwidth">
+                <tr>
+                    <td>
+                        <a>8886013505181.json <span class="tag is-info">7Kb</span></a>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <footer class="modal-card-foot">
+            <div class="field">
+                <input class="is-checkradio" id="radio-png2" name="radio-download2" type="radio" checked="checked">
+                <label for="radio-png2">png</label>
+                <input class="is-checkradio" id="radio-jpg2" name="radio-download2" type="radio">
+                <label for="radio-jpg2">jpg</label>
+            </div>
+            <button class="button is-success is-pulled-right">다운로드</button>
+        </footer>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <nav class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <p class="subtitle is-5">
+                            <strong>스마트 영수증</strong>&nbsp;
+                        </p>
+                    </div>
+                    <div class="level-item">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <input class="input is-rounded" type="text" placeholder="검색어">
+                            </p>
+                            <p class="control">
+                                <button class="button is-rounded search-button">
+                                    검색
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="level-right">
+                    <p class="level-item"><a class="button is-rounded modal-button" data-target="Export">선택 내보내기</a></p>
+                    <p class="level-item"><a class="button is-rounded modal-button" data-target="Download">선택 다운로드</a>
+                    </p>
+                    <p class="level-item"><a class="button is-rounded modal-button" data-target="Delete">선택 삭제</a></p>
+                    <p class="level-item"><a class="button is-rounded is-danger modal-button"
+                                             data-target="Initialization">초기화</a></p>
+                    <p class="level-item"><a class="button is-rounded is-link modal-button" data-target="Receipt">추가</a>
+                    </p>
+                </div>
+            </nav>
+            <hr>
+            <div class="main">
+                <div class="list">
+                    <nav class="panel">
+                        <!--<p class="panel-tabs">
+                            <a class="is-active">all</a>
+                            <a>public</a>
+                            <a>private</a>
+                            <a>sources</a>
+                            <a>forks</a>
+                        </p>-->
+                        <a class="panel-block panel-date">
+                            <span class="panel-icon">
+                              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                            </span>
+                            <small>18.07.01 (일)</small>
+                        </a>
+                        <!-- 선택된 아이템
+                        <a class="panel-block is-active is-focused">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                            </span>
+                            <small>국시엔국수 [8886013505181.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -30,000<small>원</small>
+                            </span>
+                        </a>
+                        -->
+                        <a class="panel-block is-active">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                            </span>
+                            <small>국시엔국수 [8886013505181.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -30,000<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                            </span>
+                            <small>투썸플레이스 [8805301070460.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -4,600<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fas fa-undo" aria-hidden="true"></i>
+                            </span>
+                            <small>미팩토리 [4005808820221.json]</small>
+                            <span class="panel-price is-pulled-right has-text-link">
+                                +3,500<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block panel-date">
+                            <span class="panel-icon">
+                              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                            </span>
+                            <small>18.06.30 (토)</small>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                            </span>
+                            <small>네이버(주) [810005325.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -11,400<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                            </span>
+                            <small>하모니마트(동판교점) [9788928312757.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -3,000<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                            </span>
+                            <small>아이스팡팡 [9318329312717.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -5,000<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                            </span>
+                            <small>미팩토리 [418008312.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -3,500<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block panel-date">
+                            <span class="panel-icon">
+                              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                            </span>
+                            <small>18.06.29 (금)</small>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-mastercard" aria-hidden="true"></i>
+                            </span>
+                            <small>GSfresh.com상품 [149031481.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -8,050<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fas fa-undo" aria-hidden="true"></i>
+                            </span>
+                            <small>GSfresh.com상품 [619001319.json]</small>
+                            <span class="panel-price is-pulled-right has-text-link">
+                                +8,000<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                            </span>
+                            <small>GSfresh.com상품 [465001310.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -8,000<small>원</small>
+                            </span>
+                        </a>
+                        <a class="panel-block panel-date">
+                            <span class="panel-icon">
+                              <i class="far fa-calendar-alt" aria-hidden="true"></i>
+                            </span>
+                            <small>18.06.28 (목)</small>
+                        </a>
+                        <a class="panel-block">
+                            <span class="panel-icon">
+                              <i class="fab fa-cc-visa" aria-hidden="true"></i>
+                            </span>
+                            <small>해피판교역점 [7110319381267.json]</small>
+                            <span class="panel-price is-pulled-right has-text-danger">
+                                -5,100<small>원</small>
+                            </span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="detail">
+                    <div class="detail-content content">
+                        <h1>결제
+                            <!-- 일반보기 상태 -->
+                            <a class="button is-pulled-right is-rounded">상세보기</a>
+                            <!-- 상세보기 상태
+                            <a class="button is-pulled-right is-rounded">일반보기</a>
+                            -->
+                        </h1>
+                        <p>2018.07.01 (일) 13:46:16</p>
+                        <h3>국시엔국수
+                            <span class="is-pulled-right card-visa">
+                                <i class="fab fa-cc-visa"></i>&nbsp;비자카드
+                            </span>
+                            <!-- 마스터카드
+                            <span class="is-pulled-right card-master">
+                                <i class="fab fa-cc-mastercard"></i>&nbsp;마스터카드
+                            </span>
+                            -->
+                        </h3>
+                        <hr>
+                        <h1 class="is-marginless has-text-right">
+                            <span class="is-pulled-left">거래금액</span>
+                            <span class="has-text-danger">30,000<small>원</small></span>
+                        </h1>
+                        <!-- 상세보기 상태
+                        <p class="is-marginless has-text-right">
+                            <span class="is-pulled-left">거래시각</span>
+                            <span>2018.07.01 (일) 13:46:16</span>
+                        </p>
+                        <p class="is-marginless has-text-right">
+                            <span class="is-pulled-left">거래구분</span>
+                            <span>결제</span>
+                        </p>
+                        <p class="has-text-right">
+                            <span class="is-pulled-left">거래형태</span>
+                            <span>오프라인</span>
+                        </p>
+                        <p class="is-marginless has-text-right">
+                            <span class="is-pulled-left">카드정보</span>
+                            <span>비자카드</span>
+                        </p>
+                        <p class="is-marginless has-text-right">
+                            <span class="is-pulled-left">카드번호</span>
+                            <span>9441-92**-****-6743</span>
+                        </p>
+                        <p class="has-text-right">
+                            <span class="is-pulled-left">승인번호</span>
+                            <span>8886013505181</span>
+                        </p>
+                        <p class="is-marginless has-text-right">
+                            <span class="is-pulled-left">사용처</span>
+                            <span>국시엔국수</span>
+                        </p>
+                        <p class="is-marginless has-text-right">
+                            <span class="is-pulled-left">주소</span>
+                            <span>서울 용산구 한강대로 376번길 37</span>
+                        </p>
+                        <p class="is-marginless has-text-right">
+                            <span class="is-pulled-left">전화번호</span>
+                            <span>031-705-1266</span>
+                        </p>
+                        -->
+                    </div>
+
+                    <div class="field is-grouped is-pulled-right">
+                        <p class="control">
+                            <a class="button is-rounded">내보내기</a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-rounded modal-button" data-target="DetailDownload">다운로드</a>
+                        </p>
+                        <p class="control">
+                            <a class="button is-rounded">삭제</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/fontawesome.js"></script>
+<script src="js/master.js"></script>
+</body>
+</html>

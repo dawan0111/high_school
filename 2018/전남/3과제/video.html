@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>영상 보기</title>
+	<link rel="stylesheet" href="./css/css.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<h1>
+				<a href="./index.html">YEOSU STREAMING</a>
+			</h1>
+		</div>
+		<div class="search">
+			<div>
+				<input type="text" placeholder="검색">
+				<button><img src="./images/search.png" alt="icon"></button>
+			</div>
+		</div>
+		<div id="user">
+			<a href="./join.html" class="page  login-tag no-login">회원가입</a>
+			<a href="./login.html" class="page login-tag no-login">로그인</a>
+			<span class='page logout login-tag yes-login'>로그아웃</span>
+			<a class='user login-tag yes-login go-user' href='./user.html'>
+				<img src='./images/image.jpg' alt='profile' class='profile'>
+			</a>
+		</div>
+	</header>
+	<div class="video_user">
+		
+	</div>
+	<div class="video_wrap">
+		<div class="video">
+			<div class="view-panel">
+				<video src="" id="main_video"></video>
+				<div class="video_btn">
+					<img src="./images/play.png" alt="" class="play play_">
+					<img src="./images/pause.png" alt="" class="pause play_">
+					<img src="./images/volume.png" alt="" class="volume volume_">
+					<img src="./images/volume_off.png" alt="" class="volume_off volume_">
+					<input type="range" class="volume_change" max="100" min="0" />
+					<div type="range" id="progress" value="0">
+						<div id="progress-bar" style="background: linear-gradient(to right, lightgreen, lightblue); width: 0%; height: 100%; margin: 0;"></div>
+					</div>
+					<span><span class="now_time">0:0</span>&nbsp;/&nbsp;<span class="full_time">0:0</span></span>
+				</div>
+			</div>
+			<div class="video_contents">
+				<p class="title">엑스포의 멋진 디지털 갤러리 관람! #2 - 사랑내기</p>
+				<p></p>
+				<p class="view">조회수 <span>943,523</span>회</p>
+				<p class="good">
+					<span class="good_btn"><img src="./images/good.png" alt="good"><span>45,421</span></span>
+					<span class="bad_btn"><img src="./images/bad.png" alt="bad"><span>63</span></span>
+				</p>
+			</div>
+			<div class="video_contents__">
+				<p class="update">게시일 : <span>2013.04.20</span></p>
+				<p class="contents">아름다운 여수에서 개최한 엑스포속에 있는 거대한 디지털 갤러리</p>
+			</div>
+			<div class="comments">
+				
+			</div>
+		</div>
+		<div class="next_video">
+			<a href="./video.html">
+				<div>
+					<img src="./images/image1.jpg" alt="img">
+				</div>
+				<div>
+					<p class="title">여수 홍보</p>
+					<p>여수사랑</p>
+					<p>조회수 43,294회</p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const video_idx = url.searchParams.get("video");
+
+		var like_state = false;
+		var like_idx = false;
+
+		var now_user;
+
+		Storage.open("list").done(() => {
+			reload();
+			commentLoad();
+			videoLoad();
+			outerVideoLoad();
+
+			Storage.getTable("member").done((members) => {
+				now_user = members.get("id", login)[0];
+			});
+		});
+
+		$(document).on({
+			click : function() {
+				if(!login) {
+					alert("로그인 후 이용해주세요.");
+					return;
+				}
+
+				if($(this).hasClass("good_btn")) {
+					if(like_state == "good") {
+						alert("이미 좋아요를 누르셨습니다.");
+						return false;
+					}
+				} else {
+					if(like_state == "bad") {
+						alert("이미 싫어요를 누르셨습니다.");
+						return false;
+					}	
+				};
+
+				likeChange($(this).hasClass("good_btn") ? "like" : "bad");
+			},
+		}, ".good_btn, .bad_btn");
+
+		$(document).on({
+			click () {
+				if(!login) {
+					alert("회원만 댓글 작성이 가능합니다.");
+					return false;
+				}
+
+				var input = $("#comment_input").val();
+
+				Storage.table("comment").put({
+					name : now_user.firstName+now_user.endName,
+					content : input,
+					vidx : video_idx,
+				}).onsuccess = () => {
+					commentLoad();
+				};
+			},
+		}, ".comment_btn");
+
+		function likeChange(type) {
+			var putData = {
+				vidx : video_idx,
+				id : login,
+				type : type
+			};
+
+			if(like_idx)
+				putData.idx = like_idx;
+
+			Storage.table("like").put(putData).onsuccess = () => {
+				reload();
+			};
+		};
+
+		function reload() {
+			Storage.getTable("video").done((video) => {
+				video = video.get("idx", video_idx)[0];
+
+				$.when(
+					getLike(video.idx),
+					getFollow(video.id),
+					getHit(video.idx)
+				).done((like, follow, hit) => {
+					var date = video.date || new Date();
+					var viewDate = date.getFullYear()+"."+zero(date.getMonth() + 1)+"."+zero(date.getDate());
+					var hitChk = hit.get("id", login);
+					var viewHit = hit.length;
+
+					var nowLike = like.like.get("id", login),
+						nowBad = like.bad.get("id", login);
+
+					if(hitChk.length == 0 && login) {
+						Storage.table("hit").put({
+							"vidx" : video_idx,
+							"id" : login
+						});
+
+						viewHit++;
+					};
+
+					var me_follow = follow.get("id", login);
+
+					$(".video_user").html(`
+						<div>
+							<div></div>
+							<a href="./user.html?id=${video.id}">
+								<img src="./images/image.jpg" alt="user_profile">
+								<span class="name">${video.name}</span>
+							</a>
+							<span>팔로워 <span class="follow_count">${(follow.length).toLocaleString()} 명</span></span>
+							<button class="follow follow-btn no-follow" data-user="">팔로우</button>
+							<button class="follow follow-btn yes-follow" data-user="">팔로우 해제</button>
+						</div>
+					`);
+
+					$(".video_contents").html(`
+						<p class="title">${video.title} - ${video.name}</p>
+						<p></p>
+						<p class="view">조회수 <span>${viewHit}</span>회</p>
+						<p class="good">
+							<span class="good_btn"><img src="./images/good.png" alt="good"><span>${like.like.length}</span></span>
+							<span class="bad_btn"><img src="./images/bad.png" alt="bad"><span>${like.bad.length}</span></span>
+						</p>
+					`);
+
+					$(".video_contents__").html(`
+						<p class="update">게시일 : <span>${viewDate}</span></p>
+						<p class="contents">${video.content}</p>
+					`);
+
+					if(
+						nowLike.length != 0 ||
+						nowBad.length != 0
+					) {
+						if(nowLike.length != 0) {
+							like_state = "good";
+							like_idx = nowLike[0].idx;
+						} else {
+							like_state = "bad";
+							like_idx = nowBad[0].idx;
+						};
+					};
+
+					if(me_follow.length == 0) {
+						$(".yes-follow").hide();
+						$(".no-follow").show();
+					} else {
+						$(".no-follow").hide();
+						$(".yes-follow").show();
+					};
+
+					$(".follow-btn").attr("data-target", video.id);
+				});
+			});
+		};
+
+		function commentLoad() {
+			Storage.getTable("comment").done((comments) => {
+				comments = comments.get("vidx", video_idx);
+
+				$(".comments").html(`
+					<p>댓글 <span>${comments.length}</span>개</p>
+					<textarea id="comment_input"></textarea>
+					<span class="comment_btn">작성</span>
+					<hr>
+				`)
+
+				$.each(comments, (idx, comment) => {
+					$(".comments").append(`
+						<div class="comment">
+							<div>
+								<img src="./images/image.jpg" alt="user_profile">
+							</div>
+							<div>
+								<p>${comment.name}</p>
+								<p>${comment.content}</p>
+							</div>
+						</div>
+					`);
+				});
+			});
+		};
+
+		function videoLoad() {
+			Storage.getTable("video").done((videos) => {
+				var video = videos.get("idx", video_idx)[0];
+
+				$(".view-panel video").attr("src", URL.createObjectURL(video.video));
+				Video.videoSet($("#main_video"));
+			});
+		}
+
+		function outerVideoLoad() {
+			Storage.getTable("video").done((videos) => {
+				$(".next_video").html("");
+
+				var videos = videos.no("idx", video_idx);
+				shuffle(videos);
+
+				videos = videos.slice(0, 8);
+
+				$.each(videos, (idx, video) => {
+
+					getHit(video.idx).done((hit) => {
+						$(".next_video").append(`
+							<a href="./video.html?video=${video.idx}">
+								<div>
+									<img src="${URL.createObjectURL(video.image)}" alt="img">
+								</div>
+								<div>
+									<p class="title">${video.title}</p>
+									<p>${video.name}</p>
+									<p>조회수 ${(hit.length).toLocaleString()}회</p>
+								</div>
+							</a>
+						`);
+					});
+				});
+			});
+		}
+	</script>
+</body>
+</html>

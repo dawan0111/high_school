@@ -1,0 +1,974 @@
+/* document css */
+
+
+/* get font */
+@font-face {
+	src : url("../font/NanumSquareL.ttf");
+	font-family: nanum;
+	font-weight: 100;
+}
+@font-face {
+	src : url("../font/NanumSquareR.ttf");
+	font-family: nanum;
+	font-weight: 400;
+}
+@font-face {
+	src : url("../font/NanumSquareB.ttf");
+	font-family: nanum;
+	font-weight: 600;
+}
+@font-face {
+	src : url("../font/NanumSquareEB.ttf");
+	font-family: nanum;
+	font-weight: 900;
+}
+
+/* default set */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: nanum;
+	scroll-behavior: smooth;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	font-size: 16px;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.rap {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* visual */
+.visual {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: url("../images/main.jpg") center center / cover;
+}
+
+/* visual header */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(100% - 100px);
+	height: 100px;
+	margin: 0 auto;
+	border-bottom: 2px solid #f2f4f8;
+	color: #fff;
+	font-weight: 100;
+}
+.logo {
+	font-size: 37px;
+	line-height: 30px;
+}
+.logo span {
+	color: #09adef;
+}
+
+.nav-item {
+	position: relative;
+	left: -45px;
+	display: flex;
+	font-size: 20px;
+}
+.nav-item li {
+	margin: 0 11px;
+}
+
+.toggle-menu {
+	position: relative;
+	z-index: 5;
+	width: 30px;
+	cursor: pointer;
+}
+.toggle-menu:before,
+.toggle-menu:after,
+.toggle-menu .stick {
+	position: relative;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 3px;
+	background: #f2f4f8;
+	transition: .5s ease;
+	content: "";
+}
+.toggle-menu .stick {
+	margin: 7px 0;
+}
+
+.visual-text {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	font-weight: 100;
+	font-size: 48px;
+	text-align: center;
+	transform: translateY(-50%);
+}
+.visual-text .typing {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+.visual-text .typing:after {
+	content: "ㅇ";
+	color: #f2f4f8;
+	animation: typing 20s ease infinite;
+}
+.visual-text .typing:before {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	background: #fff;
+	animation: cursor 1s steps(1) infinite;
+	content: "";
+}
+.visual-text .typing .underline {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 46px;
+	height: 1.1px;
+	background: #fff;
+	animation: underline 20s steps(1) infinite;
+}
+.visual-text .sub {
+	margin-top: 10px;
+	color: #09adef;
+	letter-spacing: 5px;
+}
+@keyframes cursor {
+	0% {
+		opacity: 1;	
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* main visual animation */
+@keyframes typing {
+	0.53% { content: "ㅇ"; }
+	1.06% { content: "아"; }
+	1.59% { content: "알"; }
+	2.12% { content: "아르"; }
+	2.65% { content: "아름"; }
+	3.18% { content: "아름ㄷ"; }
+	3.71% { content: "아름다"; }
+	4.24% { content: "아름당"; }
+	4.77% { content: "아름다우"; }
+	5.3% { content: "아름다운"; }
+	5.83% { content: "아름다운 "; }
+	6.36% { content: "아름다운 ㅂ"; }
+	6.89% { content: "아름다운 받"; }
+	7.42% { content: "아름다운 바다"; }
+	7.95% { content: "아름다운 바다 "; }
+	8.48% { content: "아름다운 바다 ㅅ"; }
+	9.01% { content: "아름다운 바다 수"; }
+	9.54% { content: "아름다운 바다 숨"; }
+	10.07% { content: "아름다운 바다 숨 "; }
+	10.6% { content: "아름다운 바다 숨 ㅅ"; }
+	11.13% { content: "아름다운 바다 숨 수"; }
+	11.66% { content: "아름다운 바다 숨 쉬"; }
+	12.19% { content: "아름다운 바다 숨 쉰"; }
+	12.72% { content: "아름다운 바다 숨 쉬느"; }
+	13.25% { content: "아름다운 바다 숨 쉬는"; }
+	13.78% { content: "아름다운 바다 숨 쉬는 "; }
+	14.31% { content: "아름다운 바다 숨 쉬는 ㅇ"; }
+	14.84% { content: "아름다운 바다 숨 쉬는 여"; }
+	15.37% { content: "아름다운 바다 숨 쉬는 연"; }
+	15.9% { content: "아름다운 바다 숨 쉬는 연ㅇ"; }
+	16.43% { content: "아름다운 바다 숨 쉬는 연아"; }
+	16.96% { content: "아름다운 바다 숨 쉬는 연안"; }
+	17.49% { content: "아름다운 바다 숨 쉬는 연안 "; }
+	18.02% { content: "아름다운 바다 숨 쉬는 연안 ㅇ"; }
+	18.55% { content: "아름다운 바다 숨 쉬는 연안 여"; }
+	19.08% { content: "아름다운 바다 숨 쉬는 연안 엿"; }
+	19.61% { content: "아름다운 바다 숨 쉬는 연안 여수"; }
+	20.14% { content: "아름다운 바다 숨 쉬는 연안 여수"; }
+	20.67% { content: "아름다운 바다 숨 쉬는 연안 여수"; }
+	21.2% { content: "아름다운 바다 숨 쉬는 연안 여ㅅ"; }
+	21.73% { content: "아름다운 바다 숨 쉬는 연안 여"; }
+	22.26% { content: "아름다운 바다 숨 쉬는 연안 "; }
+	22.79% { content: "아름다운 바다 숨 쉬는 연안"; }
+	23.32% { content: "아름다운 바다 숨 쉬는 연"; }
+	23.85% { content: "아름다운 바다 숨 쉬는 "; }
+	24.38% { content: "아름다운 바다 숨 쉬는"; }
+	24.91% { content: "아름다운 바다 숨 쉬"; }
+	25.44% { content: "아름다운 바다 숨 "; }
+	25.97% { content: "아름다운 바다 숨"; }
+	26.5% { content: "아름다운 바다 "; }
+	27.03% { content: "아름다운 바"; }
+	27.56% { content: "아름다운 "; }
+	28.09% { content: "아름다운"; }
+	28.62% { content: "아름다"; }
+	29.15% { content: "아름"; }
+	29.68% { content: "아"; }
+	30.21% { content: "ㅅ"; }
+	30.74% { content: "새"; }
+	31.27% { content: "생"; }
+	31.8% { content: "생ㅁ"; }
+	32.33% { content: "생며"; }
+	32.86% { content: "생명"; }
+	33.39% { content: "생명ㅇ"; }
+	33.92% { content: "생명으"; }
+	34.45% { content: "생명의"; }
+	34.98% { content: "생명의 "; }
+	35.51% { content: "생명의 ㅍ"; }
+	36.04% { content: "생명의 푸"; }
+	36.57% { content: "생명의 풀"; }
+	37.1% { content: "생명의 푸르"; }
+	37.63% { content: "생명의 푸를"; }
+	38.16% { content: "생명의 푸르르"; }
+	38.69% { content: "생명의 푸르름"; }
+	39.22% { content: "생명의 푸르름 "; }
+	39.75% { content: "생명의 푸르름 ㄱ"; }
+	40.28% { content: "생명의 푸르름 가"; }
+	40.81% { content: "생명의 푸르름 갇"; }
+	41.34% { content: "생명의 푸르름 가드"; }
+	41.87% { content: "생명의 푸르름 가득"; }
+	42.4% { content: "생명의 푸르름 가득ㅎ"; }
+	42.93% { content: "생명의 푸르름 가득하"; }
+	43.46% { content: "생명의 푸르름 가득한"; }
+	43.99% { content: "생명의 푸르름 가득한 "; }
+	44.52% { content: "생명의 푸르름 가득한 ㅇ"; }
+	45.05% { content: "생명의 푸르름 가득한 여"; }
+	45.58% { content: "생명의 푸르름 가득한 엿"; }
+	46.11% { content: "생명의 푸르름 가득한 여수"; }
+	46.64% { content: "생명의 푸르름 가득한 여수"; }
+	47.17% { content: "생명의 푸르름 가득한 여수"; }
+	47.7% { content: "생명의 푸르름 가득한 여ㅅ"; }
+	48.23% { content: "생명의 푸르름 가득한 여"; }
+	48.76% { content: "생명의 푸르름 가득한 "; }
+	49.29% { content: "생명의 푸르름 가득한"; }
+	49.82% { content: "생명의 푸르름 가득"; }
+	50.35% { content: "생명의 푸르름 가"; }
+	50.88% { content: "생명의 푸르름 "; }
+	51.41% { content: "생명의 푸르름"; }
+	51.94% { content: "생명의 푸르"; }
+	52.47% { content: "생명의 푸"; }
+	53% { content: "생명의 "; }
+	53.53% { content: "생명의"; }
+	54.06% { content: "생명"; }
+	54.59% { content: "생"; }
+	55.12% { content: "ㅇ"; }
+	55.65% { content: "이"; }
+	56.18% { content: "일"; }
+	56.71% { content: "일ㅅ"; }
+	57.24% { content: "일사"; }
+	57.77% { content: "일상"; }
+	58.3% { content: "일상ㅇ"; }
+	58.83% { content: "일상에"; }
+	59.36% { content: "일상엣"; }
+	59.89% { content: "일상에서"; }
+	60.42% { content: "일상에서 "; }
+	60.95% { content: "일상에서 ㅅ"; }
+	61.48% { content: "일상에서 수"; }
+	62.01% { content: "일상에서 쉬"; }
+	62.54% { content: "일상에서 쉼"; }
+	63.07% { content: "일상에서 쉼ㅍ"; }
+	63.6% { content: "일상에서 쉼표"; }
+	64.13% { content: "일상에서 쉼표 "; }
+	64.66% { content: "일상에서 쉼표 ㅎ"; }
+	65.19% { content: "일상에서 쉼표 하"; }
+	65.72% { content: "일상에서 쉼표 한"; }
+	66.25% { content: "일상에서 쉼표 하나"; }
+	66.78% { content: "일상에서 쉼표 하나 "; }
+	67.31% { content: "일상에서 쉼표 하나 ㅇ"; }
+	67.84% { content: "일상에서 쉼표 하나 여"; }
+	68.37% { content: "일상에서 쉼표 하나 엿"; }
+	68.9% { content: "일상에서 쉼표 하나 여수"; }
+	69.43% { content: "일상에서 쉼표 하나 여수"; }
+	69.96% { content: "일상에서 쉼표 하나 여수"; }
+	70.49% { content: "일상에서 쉼표 하나 여ㅅ"; }
+	71.02% { content: "일상에서 쉼표 하나 여"; }
+	71.55% { content: "일상에서 쉼표 하나 "; }
+	72.08% { content: "일상에서 쉼표 하나"; }
+	72.61% { content: "일상에서 쉼표 하"; }
+	73.14% { content: "일상에서 쉼표 "; }
+	73.67% { content: "일상에서 쉼표"; }
+	74.2% { content: "일상에서 쉼"; }
+	74.73% { content: "일상에서 "; }
+	75.26% { content: "일상에서"; }
+	75.79% { content: "일상에"; }
+	76.32% { content: "일상"; }
+	76.85% { content: "일"; }
+	77.38% { content: "ㅎ"; }
+	77.91% { content: "호"; }
+	78.44% { content: "화"; }
+	78.97% { content: "활"; }
+	79.5% { content: "활ㄹ"; }
+	80.03% { content: "활려"; }
+	80.56% { content: "활력"; }
+	81.09% { content: "활력 "; }
+	81.62% { content: "활력 ㅇ"; }
+	82.15% { content: "활력 이"; }
+	82.68% { content: "활력 있"; }
+	83.21% { content: "활력 있ㄱ"; }
+	83.74% { content: "활력 있고"; }
+	84.27% { content: "활력 있고 ㅇ"; }
+	84.8% { content: "활력 있고 아"; }
+	85.33% { content: "활력 있고 알"; }
+	85.86% { content: "활력 있고 아르"; }
+	86.39% { content: "활력 있고 아름"; }
+	86.92% { content: "활력 있고 아름ㄷ"; }
+	87.45% { content: "활력 있고 아름다"; }
+	87.98% { content: "활력 있고 아름당"; }
+	88.51% { content: "활력 있고 아름다우"; }
+	89.04% { content: "활력 있고 아름다우"; }
+	89.57% { content: "활력 있고 아름다운 "; }
+	90.1% { content: "활력 있고 아름다운 ㅇ"; }
+	90.63% { content: "활력 있고 아름다운 여"; }
+	91.16% { content: "활력 있고 아름다운 엿"; }
+	91.69% { content: "활력 있고 아름다운 여수"; }
+	92.22% { content: "활력 있고 아름다운 여수"; }
+	92.75% { content: "활력 있고 아름다운 여수"; }
+	93.28% { content: "활력 있고 아름다운 여ㅅ"; }
+	93.81% { content: "활력 있고 아름다운 여"; }
+	94.34% { content: "활력 있고 아름다운 "; }
+	94.87% { content: "활력 있고 아름다운"; }
+	95.4% { content: "활력 있고 아름다"; }
+	95.93% { content: "활력 있고 아름"; }
+	96.46% { content: "활력 있고 아"; }
+	96.99% { content: "활력 있고 "; }
+	97.52% { content: "활력 있고"; }
+	98.05% { content: "활력 있"; }
+	98.58% { content: "활력 "; }
+	99.11% { content: "활력"; }
+	99.64% { content: "활"; }
+}
+@keyframes underline {
+	21.2% {
+		opacity: 0;
+	}
+	30.21% {
+		opacity: 1;
+	}
+	47.7% {
+		opacity: 0;
+	}
+	55.12% {
+		opacity: 1;
+	}
+	70.49% {
+		opacity: 0;
+	}
+	77.38% {
+		opacity: 1;
+	}
+	93.28% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.toggle {
+	position: absolute;
+	top: -275px;
+	right: -700px;
+	width: 550px;
+	height: 550px;
+	background: #09adef;
+	transform: rotate(45deg);
+	transition: .5s ease;
+}
+#toggle:checked ~ .visual .toggle {
+	right: -275px;
+}
+#toggle:checked ~ .visual .toggle-menu:before {
+	transform: rotate(-135deg);
+	top: 10px;
+	background: black;
+}
+#toggle:checked ~ .visual .toggle-menu .stick {
+	opacity: 0;
+}
+#toggle:checked ~ .visual .toggle-menu:after {
+	transform: rotate(135deg);
+	top: -10px;
+	background: black;
+}
+.toggle-menu-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: rotate(-45deg);
+}
+.toggle-menu-content ul {
+	position: absolute;
+	left: 15%;
+	bottom: 13%;
+}
+.toggle-menu-content ul li {
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	font-size: 18px;
+}
+.toggle-menu-content ul li a {
+	transition: .5s ease;
+}
+.toggle-menu-content ul li a:hover {
+	color: black;
+}
+.toggle-menu-content ul li:nth-child(2) {
+	margin-left: 30px;
+}
+.toggle-menu-content ul li:nth-child(3) {
+	margin-left: 60px;
+}
+
+/* section1 */
+
+.section1 {
+	width: 100%;
+	height: 940px;
+	overflow: hidden;
+}
+.section1-title {
+	text-align: center;
+	margin-top: 82px;
+	height: 95px;
+}
+.section1-title div {
+	font-size: 32px;
+	letter-spacing: -1px;
+}
+.section1-title p {
+	margin-top: 30px;
+	font-size: 22px;
+	letter-spacing: -.7px;
+}
+
+.slide {
+	position: relative;
+	margin-top: 105px;
+	width: 100%;
+	height: 600px;
+	background: #e5ffff;
+}
+.slide-pan {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200%;
+	height: 100%;
+	transition: .5s ease;
+}
+
+/*slide content */
+.slide-item {
+	position: relative;
+	display: block;
+	width: 10%;
+	height: 100%;
+	transition: .5s ease;
+	cursor: pointer;
+	overflow: hidden;
+}
+.slide-item span {
+	display: block;
+}
+.slide-item img {
+	position: absolute;
+	left: -.5%;
+	top: 0;
+	width: 101%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* slide-item content */
+.slide-info {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 1001%;
+	height: auto;
+	max-height: 60px;
+	background: rgba(0, 0, 0, 0.7);
+	transition: .5s ease;
+	color: #fff;
+	padding: 0px 20px 30px 20px;
+	font-weight: 100;
+}
+
+/* slide info content */
+.slide-title {
+	width: 100%;
+	height: 60px;
+	font-size: 25px;
+	line-height: 60px;
+	letter-spacing: -.5px;
+}
+.slide-des {
+	font-size: 17.5px;
+	letter-spacing: -1px;
+	opacity: .6;
+}
+.slide-address {
+	margin-top: 52px;
+	font-size: 13px;
+	letter-spacing: -.8px;
+	opacity: .7;
+}
+.slide-item:hover {
+	z-index: 999;
+	transform: scaleX(1.05) scaleY(1.1);
+}
+
+#slide1:checked ~ .slide .slide-item1,
+#slide2:checked ~ .slide .slide-item2,
+#slide3:checked ~ .slide .slide-item3,
+#slide4:checked ~ .slide .slide-item4,
+#slide5:checked ~ .slide .slide-item5,
+#slide6:checked ~ .slide .slide-item6,
+#slide7:checked ~ .slide .slide-item7,
+#slide8:checked ~ .slide .slide-item8,
+#slide9:checked ~ .slide .slide-item9,
+#slide10:checked ~ .slide .slide-item10 {
+	z-index: 9999;
+	transform: scaleX(1.1) scaleY(1.2);
+}
+#slide1:checked ~ .slide .slide-item1 .slide-info,
+#slide2:checked ~ .slide .slide-item2 .slide-info,
+#slide3:checked ~ .slide .slide-item3 .slide-info,
+#slide4:checked ~ .slide .slide-item4 .slide-info,
+#slide5:checked ~ .slide .slide-item5 .slide-info,
+#slide6:checked ~ .slide .slide-item6 .slide-info,
+#slide7:checked ~ .slide .slide-item7 .slide-info,
+#slide8:checked ~ .slide .slide-item8 .slide-info,
+#slide9:checked ~ .slide .slide-item9 .slide-info,
+#slide10:checked ~ .slide .slide-item10 .slide-info {
+	max-height: 188px;
+}
+#slide1:checked ~ .slide .slide-pan {
+	left: 40%;
+}
+#slide2:checked ~ .slide .slide-pan {
+	left: 20%;
+}
+#slide3:checked ~ .slide .slide-pan {
+	left: 0%;
+}
+#slide4:checked ~ .slide .slide-pan {
+	left: -20%;
+}
+#slide5:checked ~ .slide .slide-pan {
+	left: -40%;
+}
+#slide6:checked ~ .slide .slide-pan {
+	left: -60%;
+}
+#slide7:checked ~ .slide .slide-pan {
+	left: -80%;
+}
+#slide8:checked ~ .slide .slide-pan {
+	left: -100%;
+}
+#slide9:checked ~ .slide .slide-pan {
+	left: -120%;
+}
+#slide10:checked ~ .slide .slide-pan {
+	left: -140%;
+}
+
+/* section2, 3 title */
+.section-title p {
+	font-size: 19px;
+	color: #33cbde;
+	letter-spacing: -.8px;
+}
+.section-title > div {
+	margin-top: 10px;
+	font-size: 40px;
+	letter-spacing: -1px;
+	font-weight: 600;
+}
+
+.section2 {
+	margin-top: 10px;
+}
+
+/* section2 item */
+.gallery {
+	display: grid;
+	grid-template-columns: 278px 350px 350px 422px;
+	grid-template-rows: 290px 190px 240px 240px;
+	grid-gap: 10px;
+	width: 100%;
+	margin-top: 85px;
+	padding: 0 5px;
+}
+.gallery-item {
+	position: relative;
+}
+.gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.gallery-item-mask {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.5);
+	transition: .5s ease;
+}
+.gallery-item:hover .gallery-item-mask {
+	opacity: 1;
+}
+.gallery-item-mask button {
+	width: 100px;
+	height: 40px;
+	border:1px solid #fff;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 100;
+	letter-spacing: -1px;
+	transition: .5s ease;
+	background: none;
+	cursor: pointer;
+}
+.gallery-item-mask button:hover {
+	background: #fff;
+	color: #000;
+}
+.gallery div:nth-child(4) {
+	grid-area: 1 / 4 / span 2 / span 1;
+}
+.gallery div:nth-child(6) {
+	grid-area: 2 / 2 / span 1 / span 2;
+}
+.gallery div:nth-child(7) {
+	grid-area: 3 / 1 / span 2 / span 2;
+}
+.gallery div:nth-child(8) {
+	grid-area: 3 / 3 / span 1 / span 2;
+}
+.gallery div:nth-child(9) {
+	grid-area: 4 / 3 / span 1 / span 2;
+}
+
+/* section3 */
+.section3 {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	margin-top: 205px;
+	height: 900px;
+	padding-top: 70px;
+	background: url("../images/background.jpg") center center / cover;
+	background-attachment: fixed;
+}
+.section3:before {
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 60, 0.5);
+	content: "";
+}
+.section3-title p {
+	color: #67cefa;
+}
+.section3-title div {
+	color: #fff;
+}
+
+.section3-cont {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 80px;
+}
+
+.bus-position, .bus-info {
+	max-width: 670px;
+	width: 100%;
+	height: 550px;
+}
+.bus-position {
+	position: relative;
+	overflow: auto;
+	padding: 10px 10px 10px 0;
+}
+.bus-position::-webkit-scrollbar {
+	width: 10px;
+}
+.bus-position::-webkit-scrollbar-track {
+	background: transparent;
+}
+.bus-position::-webkit-scrollbar-thumb {
+	width: 10px;
+	border-radius: 50px;
+	background: #888888;
+}
+.bus-position::-webkit-scrollbar-thumb:hover {
+	background: #7f7d80;
+}
+.bus-position::-webkit-scrollbar-thumb:active {
+	background: #5d5a5b;
+}
+.bus-position label,
+.bus-position .bus-active {
+	display: block;
+	height: 150px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.bus-position label {
+	background: rgba(0, 0, 0, 0.5);
+	color: #f2f4f8;
+	text-align: center;
+	width: 100%;
+	line-height: 150px;
+	font-size: 32px;
+	font-weight: 100;
+	letter-spacing: -1px;
+}
+.bus-position label:not(:last-child) {
+	margin-bottom: 20px;
+}
+.bus-active {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: calc(100% - 10px);
+	border: 3px solid #f2f4f8;
+	transition: .5s ease;
+}
+
+#bus1:checked ~ .rap .bus-active {
+	top: 10px;
+}
+#bus2:checked ~ .rap .bus-active {
+	top: 180px;
+}
+#bus3:checked ~ .rap .bus-active {
+	top: 350px;
+}
+#bus4:checked ~ .rap .bus-active {
+	top: 520px;
+}
+#bus5:checked ~ .rap .bus-active {
+	top: 690px;
+}
+#bus6:checked ~ .rap .bus-active {
+	top: 860px;
+}
+
+.bus-info {
+	border-radius: 3px;
+	overflow: hidden;
+}
+.change-view {
+	position: relative;
+}
+.change-view > * {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.bus-title {
+	width: 100%;
+	height: 100px;
+	background: #1e90ff;
+	color: #fff;
+	font-size: 31px;
+	letter-spacing: -.5px;
+	font-weight: 100;
+	line-height: 100px;
+}
+.bus-title > div {
+	padding-left: 50px; 
+}
+.bus-cont {
+	width: 100%;
+	height: 450px;
+	background: #effafb;
+}
+.bus-cont-item {
+	padding: 40px;
+	padding-top: 55px;
+	padding-right: 20px;
+}
+.bus-cont-item .way {
+	display: flex;
+	flex-wrap: wrap;
+}
+.bus-cont-item .way li {
+	position: relative;
+	padding-left: 25px;
+	margin-right: 13px;
+	margin-bottom: 26px;
+	font-size: 21px;
+	letter-spacing: -1.2px;
+}
+.bus-cont-item .des {
+	position: absolute;
+	bottom: 60px;
+	left: 50px;
+	letter-spacing: -1.5px;
+	color: #777;
+	font-size: 16.5px;
+}
+.bus-cont-item .des span {
+	display: inline-block;
+}
+.bus-cont-item .des span:nth-child(2) {
+	margin-left: 50px;
+}
+.bus-cont-item .way li:not(:first-child):before {
+	position: absolute;
+	left: 0;
+	top: 12px;
+	width: 10px;
+	height: 1px;
+	background: #3d3d3d;
+	content: "";
+}
+
+#bus1:checked ~ .rap .change-view > *:nth-child(1),
+#bus2:checked ~ .rap .change-view > *:nth-child(2),
+#bus3:checked ~ .rap .change-view > *:nth-child(3),
+#bus4:checked ~ .rap .change-view > *:nth-child(4),
+#bus5:checked ~ .rap .change-view > *:nth-child(5),
+#bus6:checked ~ .rap .change-view > *:nth-child(6) {
+	transition: .5s ease;
+	opacity: 1;
+}
+
+/* footer */
+footer {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background: #f2f4f8;
+}
+footer:before {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	background: #3d3d3d;
+	content: "";
+}
+.footer-rap {
+	display: flex;
+	justify-content: space-between;
+}
+.footer-cont {
+	position: relative;
+	z-index: 3;
+	width: 50%;
+}
+.footer-email {
+	padding-top: 50px;
+}
+.footer-email h1 {
+	font-weight: 400;
+	font-size: 28px;
+	margin-bottom: 20px;
+}
+.footer-email .input-field {
+	position: relative;
+	max-width: 540px;
+	width: 100%;
+	height: 38px;
+	margin-bottom: 18px;
+}
+.footer-email .input-field input {
+	width: 100%;
+	height: 100%;
+	padding-left: 10px;
+	font-size: 22px;
+	font-weight: 100;
+	letter-spacing: -.5px;
+	background: transparent;
+	border: none;
+}
+.footer-email .input-field input:focus {
+	outline: none;
+}
+.footer-email .input-field input:focus + .input-line:before {
+	width: 100%;
+}
+.footer-email .input-field .input-line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #444444;
+}
+.footer-email .input-field .input-line:before {
+	position: absolute;
+	bottom: -1.5px;
+	left: 50%;
+	width: 0;
+	height: 3px;
+	background: #a0ceec;
+	transition: .5s ease;
+	transform: translateX(-50%);
+	content: "";
+}
+
+.social {
+	padding-top: 115px;
+}
+.social-list {
+	display: flex;
+	justify-content: center;
+}
+.social-list li {
+	margin: 0 3.25px;
+}
+.copyright {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 16.5px;
+	font-weight: 100;
+	letter-spacing: -1px;
+	color: #f2f4f8;
+}

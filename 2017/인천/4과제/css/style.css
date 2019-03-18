@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+.login-form>input[type="text"], .login-form>input[type="password"]{
+	margin-bottom: 5px;
+}
+.join-form>input[type="text"], .join-form>input[type="password"]{
+	margin-bottom: 5px;
+}
+.join-form>input[type="submit"]{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.hotel-view{
+	margin: 0px;
+}
+.hotel-view td{
+	text-align: center;
+	padding: 35px 0px !important;
+}
+.dropdown-menu{
+	padding: 10px !important;
+}
+.label{
+	margin-left: 5px;
+}
+.creserve-form>.input-group{
+	margin-bottom: 10px;
+}
+.creserve-form>select{
+	margin-bottom: 10px;
+}
+.creserve-form>input[type="submit"]{
+	margin-bottom: 20px;
+}
+.areserve-form>.input-group{
+	margin-bottom: 10px;
+}
+.areserve-form>input[type="submit"]{
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+.reserve-form>.input-group{
+	margin-top: 10px;
+}
+.chat{
+	padding: 0px;
+	list-style: none;
+}
+.chat>li{
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #999999;
+}
+.left>.chat-body>p{
+	text-align: left;
+}
+.right>.chat-body>p{
+	text-align: right;
+}
+.chat-form>textarea{
+	resize: none;
+	margin-bottom: 10px;
+}
+.admin-point-form>.input-group{
+	margin-bottom: 10px;
+}
+.admin-point-form>select{
+	margin-bottom: 10px;
+}
+.admin-table{
+	height: 400px;
+	overflow-y: scroll;
+}

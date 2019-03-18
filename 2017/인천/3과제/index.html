@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="js/app.js"></script>
+	<title>한눈에 보는 제주도</title>
+
+	<style>
+		.hover * {
+			fill: #32ED32 !important;
+		}
+		.page1 {
+			position: relative;
+		}
+		.label {
+			position: absolute;
+			background: #555;
+			padding: 5px 10px;
+			border-radius: 3px;
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+		}
+
+		.page2 > div {
+			margin: 20px 0;
+		}
+
+		.gallery_title {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#type {
+			display: inline-block;
+			width: auto;
+			float: right;
+		}
+
+		.info_box {
+			display: flex;
+		}
+
+		.navbar-header {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.dropbox {
+			width: 100%;
+			height: 400px;
+			background: #ededed;
+			border:2px dotted #ccc;
+			text-align: center;
+			font-size: 40px;
+			line-height: 400px;
+			color: #999;
+		}
+
+		canvas {
+			margin-top: 30px;
+		}
+
+		.gallery_content {
+			display: flex;
+		}
+
+		.group_box {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			margin: 20px;
+		}
+
+		.group_box span {
+			position: absolute;
+			right: 0;
+			top: 0;
+			color: #fff;
+			display: block;
+			width: 30px;
+			height: 30px;
+			background: #337ab7;
+			text-align: center;
+			line-height: 30px;
+		}
+
+		.group_box img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.item {
+			min-width: 300px;
+			min-height: 300px;
+			padding: 0px 80px;
+		}
+		.item * {
+			width: 100%;
+			height: 100%;
+		}
+		.modal-backdrop {
+			background: none !important;
+		}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">한눈에 보는 제주도</a>
+				<button type="button" class="btn back_btn"><span class="glyphicon glyphicon-arrow-left"></span></button>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div class="page page1"></div>
+		<div class="page page2">
+			<div class="info_box">
+				<div class="info_image">
+					<svg width="500" height="350"></svg>
+				</div>
+				<div class="info_text">
+					<h1></h1>
+					<div></div>
+				</div>
+			</div>
+
+			<div class="graph">
+				<h2>인구 정보</h2>
+
+				<select id="type" class="form-control">
+					<option>여자 인구수</option>
+					<option>남자 인구수</option>
+					<option>총인구수</option>
+					<option>세대수</option>
+				</select>
+
+				<canvas width="1140" height="500" id="canvas"></canvas>
+			</div>
+
+			<div class="tourList">
+				<h2>문화재</h2>
+				<br>
+				<div>
+				</div>
+			</div>
+
+			<div class="gallery">
+				<div class="gallery_title">
+					<h2>갤러리</h2>
+					<button type="button" class="btn btn-primary upload_btn" data-target='#dialog' data-toggle="modal">
+						<span class="glyphicon glyphicon-upload"></span>
+						업로드
+					</button>
+				</div>
+				<div class="gallery_content"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					등록
+				</div>
+				<div class="modal-body">
+					<div class="dropbox">
+						DROP
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary add_btn" data-dismiss="modal">게시</button>
+					<button type="button" class="btn close_btn" data-dismiss="modal">닫기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="viewer">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					보기
+				</div>
+				<div class="modal-body">
+					<div class="carousel slide" id="slide" dara-ride="carousel" data-interval="false">
+						<div class="carousel-inner slide_item">
+
+						</div>
+						<a href="#slide" data-slide="prev" class="left carousel-control">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a href="#slide" data-slide="next" class="right carousel-control">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary view_btn" data-dismiss="modal">닫기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

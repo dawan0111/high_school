@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>서울아트센터</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- 상황에 따라 화면 크기를 바꿈 -->
+	 <div class="wrap">
+		<!-- 
+			header 웹 페이지 최 상단
+			로고 및 메인 네비게이션이 있다.
+		 -->
+		<header>
+			<input type="checkbox" name="toggle" id="toggle" hidden>
+			<!-- 로고 -->
+			<a href="#" class="logo"><span class="pink">제주</span>아트센터</a>
+			<!-- 메인 네비게이션 -->
+			<nav>
+				<ul class="main-nav">
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">ABOUT</a></li>
+					<li><a href="#">GALLERY</a></li>
+					<li><a href="#">VIDEO</a></li>
+					<li><a href="#">CONTACT</a></li>
+					<li class="moblie toggle-menu"><label for="toggle">Menu</label></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- 
+			main-banner 웹페이지의 메인 배너
+			메인텍스트 애니메이션 및
+			Introduce 및 Library 콘텐츠가 있다.
+		-->
+		<div class="main-banner">
+			<!-- 메인베너 이미지 -->
+			<div class="main-banner-image"></div>
+			<!-- 메인베너 콘텐츠 -->
+			<div class="rap main-banner-rap">
+				<!-- 애니메이션 텍스트 -->
+				<div class="animation-text">
+					<p>문화예술의 꽃</p>
+					<p>감동의 세계로 여러분을 초대합니다!</p>
+				</div>
+				<!-- Introduct 및 Library -->
+				<div class="schedule">
+					<ul class="sche-category">
+						<li class="sche-block">Introduce</li>
+						<li class="sche-block">Library</li>
+					</ul>
+					<ul class="main-sche">
+						<li class="sche-block">
+							<p>First</p>
+							<div>07</div>
+						</li>
+						<li class="sche-block">
+							<p>Second</p>
+							<div>08</div>
+						</li>
+						<li class="sche-block">
+							<p>Third</p>
+							<div>09</div>
+						</li>
+						<li class="sche-block">
+							<p>Fourth</p>
+							<div>10</div>
+						</li>
+						<li class="sche-block sche-block--pink">
+							Schedule
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 
+			메인페이지 첫번째 섹션
+			제주아트센터를 소개하는 영역과 슬라이드가 있다.
+		 -->
+		<section class="section1">
+			<div class="rap section-rap">
+				<!-- 제주아트센터 소개 -->
+				<div class="section-image section1-image"></div>
+				<div class="section-content">
+					<h1>제주아트센터에 오신 것 을 환영합니다</h1>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. In adipisci obcaecati aliquam animi! Hic aliquid expedita quibusdam dolorum? Eius soluta iste distinctio tenetur ea non sequi omnis minus sint! Ipsa qui earum quod, officiis laudantium ratione inventore saepe ut consequuntur ullam dolores tenetur quasi esse fuga eum. Voluptatibus, quas, voluptatum.
+					</div>
+					<a href="#" class="pink">Read More</a>
+				</div>
+			</div>
+			<!-- 슬라이드쇼 및 보드 이미지 -->
+			<ul class="section1-subimage-list">
+				<li></li>
+				<li class="slide">
+					<input type="radio" name="slide" id="slide1" checked>
+					<input type="radio" name="slide" id="slide2">
+					<input type="radio" name="slide" id="slide3">
+					<ul class="slide-image">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<ul class="slide-control">
+						<li>
+							<label for="slide3"></label>
+							<label for="slide2"></label>
+						</li>
+						<li>
+							<label for="slide1"></label>
+							<label for="slide3"></label>
+						</li>
+						<li>
+							<label for="slide2"></label>
+							<label for="slide1"></label>
+						</li>
+					</ul>
+					<div class="slide-position">
+						<label for="slide1"></label>
+						<label for="slide2"></label>
+						<label for="slide3"></label>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<!-- 
+			메인페이지 2번째 세션
+			제주아트센터 공연에 대한 안내와 공연 카드가 있다.
+		-->
+		<section class="section2">
+			<div class="rap section-rap">
+				<!-- 제주아트센터 공연에 대한 안내 -->
+				<div class="section-content">
+					<h1>다함께 즐기는 공연</h1>
+					<div>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. In adipisci obcaecati aliquam animi! Hic aliquid expedita quibusdam dolorum? Eius soluta iste distinctio tenetur ea non sequi omnis minus sint! Ipsa qui earum quod, officiis laudantium ratione inventore saepe ut consequuntur ullam dolores tenetur quasi esse fuga eum. Voluptatibus, quas, voluptatum.
+					</div>
+					<a href="#" class="pink">Read More</a>
+				</div>
+				<div class="section-image section2-image"></div>
+			</div>
+			<!-- 2번째 세션 서브 컨텐츠 -->
+			<div class="rap section2-sub-content">
+				<a href="#" class="card first-card">
+					<ul class="card-content">
+						<li></li>
+						<li>EXAMPLE</li>
+					</ul>
+				</a>
+				<a href="#" class="card second-card">
+					<ul class="card-content">
+						<li></li>
+						<li>EXAMPLE</li>
+					</ul>
+				</a>
+			</div>
+		</section>
+		<!-- 
+			메인페이지 3번째 세션
+			문화예술, 꿈과비전, 문화향유 기회 내용이 담겨있다.
+		-->
+		<section class="section3">
+			<div class="rap">
+				<ul class="info-list">
+					<li class="info">
+						<h1>문화와 예술</h1>
+						<h2>Lorem ipsum dolor</h2>
+						<div>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet in rem perferendis dolore dolor praesentium aliquam ducimus, porro quae.
+						</div>
+					</li>
+					<li class="info">
+						<h1>꿈과 비전</h1>
+						<h2>Lorem ipsum dolor</h2>
+						<div>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet in rem perferendis dolore dolor praesentium aliquam ducimus, porro quae.
+						</div>
+					</li>
+					<li class="info">
+						<h1>문화향유 기회</h1>
+						<h2>Lorem ipsum dolor</h2>
+						<div>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet in rem perferendis dolore dolor praesentium aliquam ducimus, porro quae.
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- 
+			푸터 영역
+			footer 로고 및
+			sns아이콘 및
+			copyright 가 존재한다.
+		-->
+		<footer>
+			<div class="rap footer-content">
+				<!-- footer 로고 -->
+				<a href="#" class="footer-logo">제주아트센터</a>
+				<!-- sns아이콘 -->
+				<div class="sns-list">
+					<a href="#"><img src="icon/facebook.png" alt="sns아이콘"></a>
+					<a href="#"><img src="icon/twitter.png" alt="sns아이콘"></a>
+					<a href="#"><img src="icon/google-plus.png" alt="sns아이콘"></a>
+					<a href="#"><img src="icon/instagram.png" alt="sns아이콘"></a>
+					<a href="#"><img src="icon/youtube.png" alt="sns아이콘"></a>
+				</div>
+			</div>
+			<!-- 카피라이트 -->
+			<div class="copyright">
+				Copyright All Rights Reserved by 제주아트센터
+			</div>
+		</footer>
+	 </div>
+</body>
+</html>

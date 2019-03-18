@@ -1,0 +1,433 @@
+#contents {
+    margin: 30px 0 50px;
+}
+
+.page-title {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.page-title h2 {
+    font-weight: normal;
+    font-size: 32px;
+}
+
+.b_cnt {
+    float:right;
+    font-size:13px;
+    color:#555;
+}
+
+.n_board {
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.n_board thead tr th {
+    padding: 7px 0;
+    color: #555;
+    font-size: 14px;
+    border-bottom: 2px solid #aaa;
+    text-align:center !important;
+}
+
+.n_board thead tr th:nth-child(1) {
+    text-align: left;
+}
+
+.n_board tbody tr {
+    cursor: pointer;
+}
+
+.n_board tbody tr td:not(:nth-child(1)) {
+    text-align:center;
+}
+
+.n_board tbody tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    font-size: 13px;
+    text-align:center;
+}
+
+.write-btn {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.write-btn button {
+    float: right;
+    background-color: #4b4b4b;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+
+.b_board {
+    float: left;
+    width: 100%;
+}
+
+.b_board > ul > li {
+    float: left;
+    width: 100%;
+    height: 130px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.b_board > ul > li:last-child {
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.b_board > ul > li h4 {
+    float: left;
+    font-size: 15px;
+}
+
+.b_board > ul > li input {
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.b_board > ul > li .img-area {
+    display: inline-block;
+    width: 130px;
+    height: 105px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.b_board > ul > li .no-img {
+    width:130px;
+    height:105px;
+}
+
+.b_board > ul > li img {
+    float: left;
+    max-width: 180px;
+    max-height: 150px;
+}
+
+.b_board > ul > li h3 {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size:17px;
+    font-weight:normal;
+}
+
+.b_board > ul > li h5 {
+    float: right;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom:0;
+    top:auto;
+}
+
+.b_board > ul > li p {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    font-size: 11px;
+    color: #555;
+}
+
+.b_board > ul > li .l-info {
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.c_board {
+    float: left;
+    width: 100%;
+}
+
+.c_board > ul > li h3 {
+    font-size:18px;
+    font-weight:normal;
+}
+
+.c_board > ul > li h3 {
+    font-size:18px;
+    font-weight:normal;
+}
+
+.c_board > ul {
+    float: left;
+    width: 100%;
+}
+
+.c_board > ul > li {
+    float: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.c_board > ul > li .box {
+    float: left;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.c_board > ul > li .img {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.c_board > ul > li .no-image {
+    position: relative;
+}
+
+.c_board > ul > li .no-image p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+}
+
+/*.c_board > ul > li .img img { float:left; width:100%; height:100%; }*/
+
+.c_board > ul > li > .box > p {
+    font-size: 14px;
+    color: #444;
+}
+
+.c_board > ul > li > .box > ul {
+    float: left;
+    width: 100%;
+    margin-top:5px;
+}
+
+.c_board > ul > li > .box > ul > li {
+    float: left;
+    margin-right: 10px;
+    font-size: 13px;
+    color: #555;
+}
+
+.c_board > ul > li > .box > ul > li > span {
+    font-weight:bold;
+}
+
+.c_board > ul > li > .box > ul > li:last-child {
+    margin-right: 0;
+}
+
+.write-frm {
+    float: left;
+    width: 100%;
+}
+
+.write-frm form {
+    float: left;
+    width: 100%;
+}
+
+.write-frm form .frm-ctrl {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.write-frm form .frm-ctrl .f-list {
+    float:left;
+    width:100%; 
+    margin-bottom:5px;
+}
+.write-frm form .frm-ctrl .f-list:last-child {
+    margin-bottom:0;
+}
+
+.write-frm form .frm-ctrl .f-list span {
+    font-size:14px;
+}
+
+.write-frm form .frm-ctrl .f-list button  {
+    background-color:#4b4b4b;
+    color:#fff;
+    padding:3px 7px;
+}
+
+.write-frm form .frm-ctrl label {
+    float: left;
+    width: 17%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align:right;
+    padding-right:7px;
+}
+
+.write-frm form .frm-ctrl input[type="text"] {
+    float: left;
+    height: 30px;
+    border: 1px solid #bfbfbf;
+    width: 43%;
+}
+
+.write-frm form .frm-ctrl input[type='file'] {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.write-frm form .u_file {
+    float: left;
+    width: 32%;
+}
+
+.write-frm form .frm-ctrl textarea {
+    float: left;
+    width: 100%;
+    height: 300px;
+    resize: none;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.bd-view .page-title {
+    float: left;
+    width: 100%;
+    border-bottom: 3px solid #255f85;
+}
+
+.bd-view .page-title h2 {
+    font-size: 34px;
+    font-weight: normal;
+}
+
+.bd-view .bd-title {
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.bd-view .bd-title h3 {
+    font-weight: normal;
+}
+
+.bd-view .bd-title h5 {
+    font-weight: normal;
+}
+
+.bd-view .bd-text {
+    float: left;
+    width: 100%;
+}
+
+.bd-view .bd-text .img-area {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.bd-view .bd-text .img-area img {
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.bd-view .file-l {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.bd-view .file-l span {
+    vertical-align: text-top;
+    padding: 2px 4px;
+    background-color: #666;
+    color: #fff;
+    font-size: 12px;
+}
+
+.bd-view .file-l > ul {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.bd-view .file-l > ul > li {
+    float: left;
+    margin-right: 30px;
+}
+
+.bd-view .file-l > ul > li > a {
+    color: #6ea4c6;
+    font-size: 14px;
+}
+
+.bd-view .bd-info {
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.bd-view .bd-info .username {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.bd-view .bd-info .date {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.bd-view .bd-info .hit {
+    font-size: 12px;
+}
+
+/**/
+
+.no-page {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.no-page .no-page-area {
+    display: inline-block;
+    width: 60%;
+}
+
+.no-page .no-page-area h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.no-page .no-page-area p {
+    font-size: 18px;
+    color: #555;
+}
+
+.no-page .no-page-area button {
+    padding: 12px 25px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #129139;
+    color: #fff;
+}

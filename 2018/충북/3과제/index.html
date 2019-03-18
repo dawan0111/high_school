@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>전남 SNS</title>
+	<link rel="stylesheet" href="jquery/jquery-ui-1.12.1/jquery-ui.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link href="font-awesome-4.4.0/font-awesome-4.4.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<script src="jquery/jquery-3.2.1.js"></script>
+	<script src="jquery/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- background -->
+	<div class="bg">
+		<span><i class="fa fa-close"></i></span>
+	
+		<!-- LOGIN -->
+		<div class="login">
+			<div>
+				<div>
+					<h1>로그인</h1>
+					<h3>로그인 후 회원들과 소통해보세요!</h3>
+				</div>
+				<div>
+					<form id="loginForm">
+						<input type='text' name="id" id='id' placeholder='아이디' />
+						<input type='password' name="pw" id='pw' placeholder='비밀번호' />
+						<button type='submit'><h2>로그인</h2></button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="join">
+			<div>
+				<div>
+					<h1>회원가입</h1>
+					<h3>회원가입 후 회원들과 소통해보세요!</h3>
+				</div>
+				<div class="jo_co">
+					<form id="joinForm">
+						<ul>
+							<li><label for="id">아이디 : </label><input type="text" name="id" id="id" placeholder="아이디"></li>
+							<li><label for="pw">비밀번호 : </label><input type="password" name="pw" id="pw" placeholder="비밀번호"></li>
+							<li><label for="pw_chk">비밀번호확인 : </label><input type="password" name="re_pw" id="pw_chk" placeholder="비밀번호 확인"></li>
+							<li><label for="nickname">닉네임 : </label><input type="text" name="name" id="nickname" placeholder="닉네임"></li>
+							<li><label for="nickname">전화번호 : </label><input type="text" name="phone" id="phone" placeholder="전화번호"></li>
+							<li><label for="nickname">프로필 사진 : </label><input type="file" id="join_file"></li>
+							<li>
+								<label for="nickname">프로필 공개 여부 : </label>
+								<select name="type">
+									<option value="공개">공개</option>
+									<option value="비공개">비공개</option>
+								</select>
+							</li>
+							<button>회원가입</button>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="upload">
+			<div>
+				<div>
+					<h1>이미지 업로드</h1>
+					<h3>게시물 작성 후 회원들과 소통해보세요!</h3>
+				</div>
+				<div class="jo_co">
+					<form method="post" id="uploadForm">
+						<ul>
+							<li><label for="upload_intro">설명 : </label><input type="text" name="info" id="upload_intro" placeholder="이미지 설명"></li>
+							<li><label for="img">이미지 업로드 : </label><input type="file" id="upload_file"></li>
+	                        <li>
+	                        	<label for="upload_type">사진 Type : </label>
+	                        	<select name="type" id="upload_type">
+	                            	<option value="풍경">풍경</option>
+	                                <option value="인물">인물</option>
+	                                <option value="기타">기타</option>
+	                            </select>
+							</li>
+							<button>업로드</button>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- header -->
+	<div class="col-md-12 header">
+		<div class="container">
+			<div class="row">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+				</div>
+				<div class="membership">
+					<div class="state-view login-view">
+						<img src="images/img1.jpg" alt="img" class="member_img">
+						<span class="member_name">홍길동</span>
+						<button class="profile-btn"><h2>프로필</h2></button>
+
+						<!-- 관리자 -->
+						<button class="state-view admin-view login-view member-btn"><h2>회원 관리</h2></button>
+						<button class="state-view admin-view login-view info-btn"><h2>사이트 정보</h2></button>
+						<button class="logout"><h2>로그아웃</h2></button>
+					</div>
+					<div class="state-view no-login-view">
+						<button class="login_btn"><h2>로그인</h2></button>
+						<button class="join_btn"><h2>회원가입</h2></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- content -->
+	<div class="col-md-12 content">
+		<div class="container">
+			<div class="row">
+				<!-- left content categories -->
+				<div class="col-md-2 left_content">
+					<div class="row">
+						<div class="categories">
+							<h3>게시물 정렬</h3>
+							<ul>
+								<li data-type="sort" data-val="date"><i class="fa fa-forward"></i>최근 순</li>
+								<li data-type="sort" data-val="like"><i class="fa fa-star"></i>좋아요 순</li>
+							</ul>
+							<h3>Types</h3>
+							<ul>
+								<li data-type="category" data-val="풍경"><i class="fa fa-photo"></i>풍경</li>
+								<li data-type="category" data-val="인물"><i class="fa fa-user"></i>인물</li>
+								<li data-type="category" data-val="기타"><i class="fa fa-plus"></i>기타</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<!-- new feed -->
+				<div class="col-md-6 newsfeed">
+					<div>
+						<button class="upload_btn state-view login-view user-view">업로드 하기</button>
+					</div>
+					<div class="row">
+						<!-- feeds -->
+						<div class="col-md-12 feeds box gallery-list">
+							
+							<!-- 갤러리 -->
+							<div class="gallery">
+								<img src="images/img1.jpg" alt="img" class="gallery_img">
+								<span class="gallery_name">홍길동</span>
+								<span class="gallery_like"><i class="fa fa-star"></i> <span>1.5천</span></span>
+								<hr>
+								<p class="gallery_text">오늘 갔다왔어요 ^^</p>
+								<img src="images/img2.jpg" alt="img" class="gallery_main">
+								<hr>
+								<div>
+									<!-- 게시물 삭제 -->
+									<button class="gallery_delete">게시물 삭제</button>
+									<form class="commentForm">
+										<span class="comment">댓글</span>
+										<span class="comment_name">홍길동</span>
+										<input type="text" placeholder="댓글을 입력하세요." name="comment" class="comment_input">
+										<button class="comment_button">댓글 등록</button>
+									</form>
+									<ul class="comment_ul">
+										<li>
+											<span class="comment_name">노길동</span>
+											<span class="comment_text">정말 아름다운 경치에요!</span>
+										</li>
+										<li>
+											<span class="comment_name">김길동</span>
+											<span class="comment_text">멋있어요!</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- 프로필 -->
+							<div class="profile">
+								<form id="profileForm">
+									<ul>
+										<li>
+											<img src="images/img1.jpg" alt="img" class="profile_img">
+											<span class="profile_name">홍길동</span>
+											<button class="modify_btn my-view">프로필 수정</button>
+										</li>
+										<li class="my-view">
+											<div class="profile_left">
+												아이디
+											</div>
+											<div class="profile_right">
+												<input type="text" value="user1" name="id">
+											</div>
+										</li>
+										<li>
+											<div class="profile_left">
+												닉네임
+											</div>
+											<div class="profile_right">
+	                                            <input type="text" value="홍길동" name="name">
+											</div>
+										</li>
+										<li class="phone-view">
+											<div class="profile_left">
+												전화번호
+											</div>
+											<div class="profile_right">
+	                                        	<input type="text" value="010-1234-5678" name="phone">
+											</div>
+										</li>
+										<li class="my-view">
+											<div class="profile_left">
+												프로필 공개 여부
+											</div>
+											<div class="profile_right">
+	                                        	<select name="type" id="">
+	                                            	<option value="공개">공개</option>
+	                                                <option value="비공개">비공개</option>
+	                                            </select>
+											</div>
+										</li>
+	                                    <li class="my-view">
+	                                    	<div class="profile_left">
+	                                        	<img src="images/img1.jpg" alt="img" class="profile_img update-image" style="margin:0">
+	                                        </div>
+	                                        <div class="profile_right"><input type="file" id="updateFile"></div>
+	                                    </li>
+									</ul>
+								</form>
+							</div>
+
+							<!-- admin -->
+							<div class="admin">
+								<div class="site-info">
+									<h1>사이트 정보</h1>
+									<canvas id="canvas" width="500" height="500"></canvas>
+								</div>
+								<div class="site-member">
+									<h1>회원 관리</h1>
+									<table>
+										<tr>
+											<th>아이디</th>
+											<th>비밀번호</th>
+											<th>닉네임</th>
+											<th>전화번호</th>
+											<th>회원 삭제</th>
+										</tr>
+										<tbody class="member-tbody">
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>

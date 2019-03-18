@@ -1,0 +1,513 @@
+#logo {
+    float: left;
+    height: 100px;
+    line-height: 100px;
+}
+
+#util-menu {
+    float: right;
+    height: 100px;
+    line-height: 100px;
+}
+
+#util-menu ul li {
+    float: left;
+    color: #666;
+    margin: 0 15px;
+}
+
+#util-menu ul li a {
+    font-size: 12px;
+}
+
+#util-menu ul li:not(:last-child) a:after {
+    content: "|";
+    margin-left: 30px;
+}
+
+#util-menu ul li button {
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+#main-menu {
+    float: left;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    padding: 15px 0;
+    position: relative;
+    background-color:#333;
+    border-top:1px solid #fff;
+    border-bottom:1px solid #fff;
+}
+
+#main-menu ul.menu {
+    float:left;
+    width:100%;
+    padding:0 50px;
+}
+
+#main-menu ul.menu > li {
+    float: left;
+}
+
+#main-menu ul.menu > li:last-child {
+    margin-right: 0;
+}
+
+#main-menu ul.menu > li > a {
+    float: left;
+    font-size: 14px;
+    width: 150px;
+    color:#fff;
+}
+
+#main-menu ul.menu > li > a:hover {
+    color:#d1d11b;
+}
+
+.submenu {
+    float: left;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 99999;
+    background-color:#222;
+    padding:0 50px;
+}
+
+.submenu .submenu-find { 
+    float:left; width:100%;
+    padding:0 50px;
+}
+
+.submenu > div > .submenu-find > ul {
+    float: left;
+    width: 150px;
+    min-height:50px;
+}
+
+.submenu > div > .submenu-find > ul > li {
+    float: left;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.submenu > div > .submenu-find > ul > li > a {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+}
+
+.menu_hover a:hover {
+    color:#438bbf !important;
+}
+
+.submenu > div > .submenu-find > ul > li a {
+    color: #fff;
+}
+
+.submenu > div > .submenu-find > ul > li > ul > li {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.submenu > div > .submenu-find > ul > li > ul > li > a {
+    font-size: 12px;
+    color: #ddd;
+}
+
+.banner {
+    float: left;
+    width: 100%;
+}
+
+.banner .banner-pos {
+	position:absolute;
+	left:50%;
+	bottom:30px;
+	transform:translateX(-50%);
+}
+.banner .banner-pos > ul > li:nth-child(1) {
+	margin-left:0;
+}
+
+.banner .banner-pos > ul > li {
+	float:left;
+	width:25px;
+	height:25px;
+	border-radius:100%;
+	background-color:#000;
+	margin-left:15px;
+	cursor:pointer;
+}
+
+.banner .banner-img {
+    float: left;
+    width: 100%;
+    position: relative;
+    min-height: 400px;
+}
+
+.banner .banner-img .left-back {
+    float:left; width:17%; left:0; top:0; position:absolute; height:400px; z-index:9999;
+}
+
+.banner .banner-img .right-back {
+    float:left; width:17%; right:0; top:0; position:absolute; height:400px; z-index:9999;
+}
+
+
+.banner .banner-img > ul {
+    float: left;
+    width: 100%;
+}
+
+.banner .banner-img > ul > li {
+    float: left;
+    width: 100%;
+    min-height: 400px;
+}
+
+.banner .banner-img > ul > li > a {
+    float: left;
+    width: 100%;
+    min-height: 400px;
+    position:relative;
+}
+
+.banner .banner-img > ul > li > a > div {
+    float: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+
+.banner .banner-img > ul > li > a > .left-img {
+    width:22%;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.banner .banner-img > ul > li .main-img {
+	width:100%;
+
+}
+
+.banner .banner-img > ul > li > a > .right-img {
+    width:22%;
+    position:absolute;
+    right:0; 
+    top:0;
+}
+
+#section {
+    float: left;
+    width: 100%;
+}
+
+#section .section {
+    float: left;
+    width: 100%;
+    padding: 30px 0;
+
+}
+#section .section > div {
+    padding: 0 10px;
+}
+
+#section .board_cont {
+    float: left;
+}
+
+#section .title {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 5px 2px;
+    margin: 10px 0 5px;
+}
+
+#section .b_board .title {
+    border-bottom: 0;
+}
+
+#section .board_cont > ul {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#section .board_cont > ul > li {
+    float:left;
+    width:100%;
+    line-height: 29px;
+    border-bottom: 1px solid #ccc;
+}
+
+#section .board_cont > ul > li:last-child {
+    border-bottom: 0;
+}
+
+#section .board_cont > ul > li > a {
+    font-size: 14px;
+}
+
+#section .board_cont > ul > li span {
+    float: left;
+    font-size: 12px;
+    color: #555;
+}
+
+#section .banner-img {
+    float: left;
+    padding: 0 10px;
+    text-align: right;
+    margin-top: 30px;
+}
+
+#section .banner-img img {
+    display: inline-block;
+    width: 100%;
+    max-height: 280px;
+}
+
+.n_board {
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.n_board thead tr th {
+    padding: 7px 0;
+    color: #555;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+.n_board thead tr th:nth-child(1) {
+    text-align: left;
+}
+
+.n_board tbody tr {
+    cursor: pointer;
+}
+
+.n_board tbody tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.write-btn {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.write-btn button {
+    float: right;
+    background-color: #256112;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+
+.b_board {
+    float: left;
+    width: 100%;
+}
+
+.b_board .title {
+    border-bottom:1px solid #dfdfdf !important;
+}
+
+.b_board > ul > li {
+    float: left;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.b_board > ul > li:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.b_board > ul > li h4 {
+    float: left;
+    font-size: 15px;
+}
+
+.b_board > ul > li input {
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+.b_board > ul > li .img-area {
+    display: inline-block;
+    width: 70px;
+    height: 60px;
+    overflow: hidden;
+    cursor: pointer;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+.b_board > ul > li img {
+    float: left;
+    max-width: 180px;
+    max-height: 150px;
+}
+
+.b_board > ul > li .no-img {
+    float:left;
+    width:70px;
+    height:60px;
+    border:1px solid #333;
+    text-align:center;
+    line-height:60px;
+    font-size:14px;
+}
+
+.b_board > ul > li h3 {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.b_board > ul > li h5 {
+    float: right;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+}
+
+.b_board > ul > li p {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    font-size: 11px;
+    color: #222;
+}
+
+.b_board > ul > li .l-info {
+    display: inline-block;
+    vertical-align: top;
+    max-width:70%;
+    margin-left:8px;
+}
+
+.c_board {
+    float: left;
+    width: 100%;
+}
+
+.c_board > ul > li h3 {
+    display:inline-block;
+    width:100%;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    font-size:15px;
+    margin:5px 0;
+}
+
+.c_board > ul {
+    float: left;
+    width: 100%;
+}
+
+.c_board > ul > li {
+    float: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.c_board > ul > li .box {
+    float: left;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.c_board > ul > li .img {
+    float: left;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.c_board > ul > li .no-image {
+    position: relative;
+    height: 100px;
+    border:1px solid #bfbfbf;
+}
+
+.c_board > ul > li .no-image p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    text-align:center;
+}
+
+/*.c_board > ul > li .img img { float:left; width:100%; height:100%; }*/
+
+.c_board > ul > li > .box > ul {
+    float: left;
+    width: 100%;
+    margin-top:5px;
+}
+
+.c_board > ul > li > .box > ul > li {
+    float: left;
+    width:100%;
+    text-align:right;
+    margin-right: 10px;
+    font-size: 11px;
+    color: #555;
+}
+
+.c_board > ul > li > .box > ul > li:last-child {
+    margin-right: 0;
+}
+
+#footer {
+    background-color: #111;
+    padding: 30px 0;
+}
+
+#footer ul li {
+    color: #555;
+    line-height: 22px;
+}
+
+#footer ul li span {
+    color: #eee;
+}
+
+#footer ul li:nth-child(3):after {
+    content: " | 팩스 : 010-2345-2345 | 이메일 : tour@yeosu.com";
+}

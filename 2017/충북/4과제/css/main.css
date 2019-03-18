@@ -1,0 +1,25 @@
+body{background: url(../images/back_bg.png) repeat-x; font-size: 14px; font-family: 'Malgun Gothic'}
+	.container{width: 1170px !important}
+	
+
+	/* MAIN LAYOUT */
+	#header{}
+		.social{height: 50px;}
+			.social-icon{line-height: 50px;}
+		.headerInner{height: 108px;}
+			.headerInner-logo{width: 30%; line-height: 108px; text-align: left;}
+			.headerInner-navi{width: 70%; height: 108px;}
+				.gnb{padding: 0; margin: 0}
+				.gnb li{width: 16.66666666666667%; list-style: none; float: left;}
+				.gnb a{width: 100%; line-height: 108px; display: block; text-align: center; text-decoration: none; color: #dba227; font-size: 15px;}
+
+	#banner{}
+		.bannerInner{background: url(../images/banner_bg.png) no-repeat; height: 336px; margin-top: 5px;}
+			.bannerText{margin-top: 60px; margin-left: 130px;}
+
+	#contents{}
+		.contentsInner{padding-top: 40px; padding-bottom: 40px;}
+
+	#footerScreen{width: 100%; height: 200px; background: #bfbfbf; float: left;}
+		#footer{width: 100%; background: #bfbfbf}
+			.footerInner{height: 200px; background: url(../images/footer_logo.png) center center no-repeat;}

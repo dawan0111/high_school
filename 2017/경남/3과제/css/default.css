@@ -1,0 +1,258 @@
+*{
+	margin:0;
+	padding: 0;
+	text-decoration:none;
+	list-style:none;
+	box-sizing:border-box;
+}
+#show{
+	display: none;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	overflow: hidden;
+}
+#frame{
+	display: block;
+	width:1200px;
+	height:580px; 
+	position: relative;
+	margin:0 auto;
+	margin-top:-20px;
+}
+header{
+	position: relative;
+	text-align:center;
+	width:100%;
+	height:200px;
+	display: block;
+	background-image:url(../img/jeju6.jpg);
+	background-size:100% auto;
+	background-position:0px -200px;
+}
+header .buttons{
+	display: inline-block;
+	margin-top:25px;
+	margin-left:1000px;
+}
+header a.btn{
+	position: relative;
+	color:white;
+	border-color:#fff;
+}
+header h1{
+	color:#e2bcd3;
+	font-weight:bolder
+}
+nav.row{
+	margin-left:0;
+	width:100%;
+	padding:6px 0px;
+	border:1px solid #cfcfcf;
+}
+nav .btn{
+	width:100%;
+}
+.left{
+	float:left;
+	height:100%;
+	width:15%;
+	padding:5px 10px;
+	border-right:1px solid #cfcfcf;
+	background-color:#ebebeb;
+	overflow-y: scroll;
+	text-align:center;
+}
+.right{
+	float:right;
+	height:100%;
+	width:15%;
+	padding:5px 10px;
+	border-right:1px solid #cfcfcf;
+	background-color:#ebebeb;
+	overflow-y: scroll;
+	text-align:left;
+}
+.slides div div{
+	width:100%;
+	height:100px;
+	background-color:white;
+	margin:10px 0px;
+	cursor:pointer;
+}
+.slides span{
+	width:40px;
+	height:40px;
+	display: inline-block;
+	font-size:24pt;
+	border:1px solid #000;
+	border-radius:100%;
+	margin-top:30px;
+}
+#shell{
+	display: inline-block;
+	position: relative;
+	width:840px;
+	height:580px;
+	border:1px solid #a8a8a8;
+	z-index:5;
+}
+#shell > *{
+	cursor: pointer;
+	position: absolute;
+}
+#shellSelect{
+	box-sizing:content-box;
+	border:4px dotted #bcbcbc;
+}
+.state > ul{
+	padding:0;
+}
+.state .element{
+	margin-top:5px;
+	border:1px solid #fff;
+	padding:3px;
+	cursor: pointer;
+} 
+
+.state .select{
+	border-color:#00a6ff;
+}
+
+.slides .select{
+	border:1px solid #00a6ff;
+}
+
+.controller a.btn{
+	color:#555;
+	border-color:#555;
+	margin-top:10px;
+	margin-left:5px;
+}
+
+
+.effect {
+	transition: transform .5s ease;	
+	transform-origin: 0% 100%;
+	transform: scale(0);
+}
+
+.show {
+	transform: scale(1);
+	animation: view .5s ease 1;
+}
+
+@keyframes view {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+#shell {
+	position: relative;
+}
+
+#shell * {
+	position: absolute !important;
+}
+
+.image_box {
+	display: inline-block;
+	width: auto;
+	height: auto;
+}
+
+.image_box img {
+	width: 100%;
+	height: 100%;
+}
+
+.childActive {
+	border: 4px dotted #ccc !important;
+}
+
+.selected {
+	border: 4px dotted #ccc;
+}
+
+
+html:-webkit-full-screen body {
+	width: 100vw;
+	height : 100vh;
+}
+
+html:-webkit-full-screen #frame {
+	width: 100vw;
+	height : 100vh;
+	margin-top: 0;
+}
+
+html:-webkit-full-screen .full_hidden {
+	display: none;
+}
+
+html:-webkit-full-screen #shell {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	border: none;
+}
+
+.fadeeffect {
+	animation: fade .5s ease 1;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.rotateeffect {
+	animation: rotate .5s ease 1;
+}
+
+@keyframes rotate {
+	0% {
+		opacity: 0;
+		transform:rotate(180deg);
+	}
+	100% {
+		opacity: 1;
+		transform: rotate(0deg);
+	}
+}
+
+.scaleeffect {
+	animation : scale .5s ease 1;
+}
+
+@keyframes scale {
+	0% {
+		transform:scale(0);
+	}
+	100% {
+		transform:scale(1);
+	}
+}
+
+.last {
+	background: #000;
+}
+
+.last:before {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%, -50%);
+	color: #fff;
+	font-size: 30px;
+	content: "마지막 장입니다. 클릭 시 슬라이드 쇼가 종료됩니다.";
+}

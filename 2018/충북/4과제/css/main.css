@@ -1,0 +1,7 @@
+/* 메인 */
+.main_content{width:100%; float:left;}
+	.main_content > .quick_banner{width:100%; float:left; height:250px; position:relative; margin:200px 0;}
+		.main_content > .quick_banner .wrap > div{width:30%; float:left; border:#ccc solid 1px; text-align:center; height:250px; padding-top:15px; border-left:none}
+		.main_content > .quick_banner .wrap > div:last-child{border-right:#ccc solid 3px}
+		.main_content > .quick_banner .wrap > div:first-child{border-left:#ccc solid 3px}
+		

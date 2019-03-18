@@ -1,0 +1,40 @@
+* { margin: 0; padding: 0; }
+*:after { content:""; display: block; clear:both; }
+
+#main { width: 1200px; margin:auto; padding: 20px; margin-top: 30px; }
+
+.nm { margin-top: 0 ! important; }
+
+.head { background-color: #efefef; }
+.head li { padding: 5px 15px 5px 15px; float: left; height: 100%; height: 56px; line-height: 56px; }
+.head li:first-child { width: 127px; }
+.head li:nth-child(2) { width: 100px; }
+.head li:nth-child(3) { width: 400px; }
+.head li:nth-child(4) { width: 250px; }
+.head li:nth-child(5) { width: 280px; }
+
+.body li { padding: 5px 15px 5px 15px; float: left; line-height: 56px; }
+.body li:first-child { width: 127px; }
+.body li:nth-child(2) { width: 100px; }
+.body li:nth-child(3) { width: 400px; }
+.body li:nth-child(4) { width: 250px; } 
+.body li:nth-child(5) { width: 280px; }
+.body li:last-child { clear:both; padding:0; float:none; line-height: 15px; }
+
+.body:nth-child(odd) { background-color: #efefef; }
+.canvas { background-color: #fff; height: 0; transition :height 1s ease; overflow:hidden; position: relative;}
+.active {
+	height: 550px;
+}
+
+canvas { overflow: hidden; }
+
+.range-field { width: 300px; margin:auto; }
+
+.graph {
+	position: relative;
+}
+
+.list {
+	cursor: pointer;
+}

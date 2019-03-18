@@ -1,0 +1,68 @@
+/* CSS Document */
+*{margin:0 auto; padding:0px; border:0px; box-sizing:border-box;}
+body{min-width:1300px}
+a{text-decoration:none; color:#000}
+a:visited{color:#000}
+.w10{width:10%}
+.w15{width:15%}
+.w20{width:20%}
+.w30{width:30%}
+.w40{width:40%}
+.w50{width:50%}
+.w60{width:60%}
+.w70{width:70%}
+.w80{width:80%}
+.w90{width:90%}
+.ww{width:100%}
+.wrap{max-width:1200px}
+.b{font-weight:800}
+.tl{text-align:left}
+.tc{text-align:center}
+.tr{text-align:right}
+.fl{float:left}
+input{border:#ccc solid 1px; font-family:'MalgunGothic'}
+.mt20{margin-top:20px}
+
+
+.button1{padding:5px 10px; border-radius:3px; background:#000; color:#fff; cursor:pointer; margin-top:40px; }
+.button2{padding:15px 20px; border-radius:7px; background:#000; color:#fff; cursor:pointer; margin-top:40px; }
+
+
+/* General */
+.top_header{width:100%; height:50px; background:url('../image/main/backgroun_top.png'); background-position:center center; background-size:cover}
+	.top_header .wrap{font-size:24px; font-weight:800; text-align:center; line-height:50px}
+	.top_header img{height:50px; vertical-align:middle}
+
+.header{width:100%; height:30px; line-height:30px; font-size:12px; background:#666; color:#eee}
+	.header .wrap > div{width:50%; float:left}
+		.header .wrap > div a{color:#eee; padding-left:15px}
+		.header .wrap > div i{margin-right:5px}
+		.header .wrap > div span{padding-right:15px}
+
+.menubar{width:100%; height:80px; float:left; border-top:#333 solid 1px; border-bottom:#999 solid 1px; overflow:hidden; transition:all 1s}
+	.menubar .logo{width:20%; float:left; text-align:center; height:80px; overflow:hidden; }
+		.menubar .logo img{margin-top: 15px;}
+	.menubar .menu{float:right}
+		.menubar .menu > div{height:80px; line-height:80px; float:left; font-weight:800; position:relative;}
+			.menubar .menu > div > a{padding:0 25px; border-right:#ccc solid 1px}
+			.menubar .menu > div:hover > a{color:#64a1ee}
+			.menubar .menu > div:last-child > a{border-right:none}
+			.menubar .menu > div > a:hover{color:#4A91EB; padding:0 25px;}
+
+/* Footer */
+.footer{width:100%; background:#666; color:#fff; float:left; padding-top:20px; padding-bottom:50px; line-height:1.5em;}
+	.footer .w25{width:50%; float:left; font-size:15px; line-height:1.6em; padding:20px; text-align:left}
+	.footer .contact{width:25%}
+	.footer .sns{width:25%}
+	.footer .sns{font-size:20px}
+		.footer .contact i{padding-right:10px}
+		.footer .w25 h3{margin-bottom:30px; font-size:22px}
+		.footer .w25 a{color:#fff; padding:0 15px}
+	
+.copy{width:100%; background:#333; color:#eee; font-size:14px; float:left; height:50px; line-height:50px; font-weight:700}
+	
+	
+.table1{width:80%; border:#000 solid 1px; border-collapse:collapse}
+	.table1 td{border:#000 solid 1px; padding:5px; font-size:10px}
+	
+.table3 td{border:#000 solid 1px; padding:5px; font-size:15px}

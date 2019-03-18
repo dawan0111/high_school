@@ -1,0 +1,59 @@
+body{background: url(../images/back_bg_sub.png) repeat-x; font-size: 14px; font-family: 'Malgun Gothic'}
+	.container{width: 1170px !important}
+	
+
+	/* MAIN LAYOUT */
+	#header{}
+		.social{height: 50px;}
+			.social-icon{line-height: 50px;}
+		.headerInner{height: 108px;}
+			.headerInner-logo{width: 30%; line-height: 108px; text-align: left;}
+			.headerInner-navi{width: 70%; height: 108px;}
+				.gnb{padding: 0; margin: 0}
+				.gnb li{width: 16.66666666666667%; list-style: none; float: left;}
+				.gnb a{width: 100%; line-height: 108px; display: block; text-align: center; text-decoration: none; color: #dba227; font-size: 15px;}
+
+	#banner{}
+		.bannerInner{background: url(../images/banner_bg.png) no-repeat; height: 236px; margin-top: 5px;}
+			.bannerText{margin-top: 30px; margin-left: 130px;}
+			.bannerText  img{width: 80%; height: auto}
+
+	#contents{}
+		.contentsInner{padding-top: 40px; padding-bottom: 40px; min-height: 600px;}
+			.titleBar{width:100%; line-height: 60px; border-bottom: solid #dfdfdf 3px; font-size: 26px; color: #666; float: left;}
+			.titleBar span{display: block; padding-left: 20px;}
+			.contentsBox{width: 100%; margin-top: 20px; float: left;}
+				/* loginForm */
+				#login, #join{width: 500px; height: 500px; margin: 0 auto;}
+
+				/* expoForm*/
+				#expo{width: 500px; height: 500px; margin: 0 auto;}
+				table{word-break: break-all;}
+				.boothTable > tbody > tr > td{padding: 0}
+				.boothTable-innner th{text-align: center;}
+				.boothTable-innner td{text-align: center; vertical-align: middle !important;}
+				
+				/* boothForm */
+				#booth{width: 71%; float: left;}
+				#boothFomr{width: 28%; float: right;}
+				#Layer_2 g{cursor: pointer;}
+				#Layer_2 *{transition: .5s}
+				.st0{fill:#FBD9E8;}
+				.st1{fill:#EA0A8A;}
+				.st2{font-family:'Malgun Gothic';}
+				.st3{font-size:12px;}
+				.st4{fill:#EC008C;stroke:#EC008C;stroke-width:0.5;stroke-miterlimit:10;}
+				.st5{font-family:'Malgun Gothic'; font-weight: bold;}
+				.st6{font-size:14px;}
+				.st7{fill:#EC008C;}
+
+				/* reservationTable */
+				#exerciseBox{width: 25%; float: left; border: #dfdfdf solid 1px; margin-right: 15px;}
+				#exerciseView table th{width: 20%; vertical-align: middle; text-align: center;}
+				#exerciseBox ul {
+					padding-left:28px;
+				}
+
+	#footerScreen{width: 100%; height: 200px; background: #bfbfbf; float: left;}
+		#footer{width: 100%; background: #bfbfbf}
+			.footerInner{height: 200px; background: url(../images/footer_logo.png) center center no-repeat;}

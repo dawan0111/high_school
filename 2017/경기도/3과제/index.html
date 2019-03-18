@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Code</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="click-menu">
+        삭제
+    </div>
+    <!-- header -->
+    <header>
+        <div class="logo">
+            <a class="btn btn-primary logo-a" href="javascript:void(0)">제주 웹에디터</a>
+        </div>
+        <div class="dirPath">
+            <div class="path">
+                <div class="text prev">3과제</div>
+                <div class="right-btn"><svg><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></div>
+            </div>
+            <div class="path">
+                <div class="text prev">제공파일</div>
+                <div class="right-btn"><svg><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></div>
+            </div>
+            <div class="path">
+                <div class="text">템플릿</div>
+            </div>
+        </div>
+        <div class="btn-wrap"> 
+            <button data-popup="#popup-folder" class="btn btn-primary">새 폴더</button>
+            <button data-popup="#popup-file" class="btn btn-primary">새 파일</button>
+            <button data-popup="#popup-image" class="btn btn-primary">이미지 업로드</button>
+        </div>
+    </header>
+    <!-- //header -->
+    
+    <!-- main -->
+    <main>
+        <!-- aside -->
+        <aside>
+
+            <!-- folder -->
+            <ul class="folder-ul">
+                <li class="title">폴더</li>
+                <li class="parent-li" name="..">
+                    <span>
+                        <svg><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path></svg>
+                    </span>
+                    <a href="javascript:void(0)">..</a>
+                </li>
+                <li class="folder-li append-li">
+                    <span>
+                        <svg><path d="M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"></path></svg>
+                    </span>
+                    <a href="#">css</a>
+                </li>
+            </ul>  
+            <!-- //folder -->
+
+            <!-- file -->  
+            <ul class="file-ul image-ul">
+                <li class="title">파일</li>
+                <li class="file-li append-li">
+                    <span>
+                        <svg><path d="M12,0H4C2.896,0,2.01,0.896,2.01,2L2,18c0,1.104,0.886,2,1.99,2H16c1.104,0,2-0.896,2-2V6L12,0z M11,4H11  z M11,7V1.5L16.5,7H11z"></path></svg>
+                    </span>
+                    <a href="#">index.html</a>
+                </li>               
+            </ul>        
+            <!-- //file -->
+
+        </aside>
+        <!-- //aside -->
+
+        <!-- editor -->
+        <div class="editor">
+            <div class="editor-tab">
+                <div>
+                    <span class="editor-text">index.html</span>
+                    <span class="editor-close">&times;</span>
+                </div>
+                <div class="this">
+                    <span class="editor-text">style.css</span>
+                    <span class="editor-close">&times;</span>
+                </div>
+                <div>
+                    <span class="editor-text">app.js</span>
+                    <span class="editor-close">&times;</span>
+                </div>
+                <div>
+                    <span class="editor-text">jquery-1.12.3.min.js</span>
+                    <span class="editor-close">&times;</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <textarea readonly class="editor-input"></textarea>
+            </div>
+            <div class="form-group text-right">
+                <button class="btn btn-default view">미리보기</button>
+                <button class="btn btn-default save">저장</button>
+            </div>
+        </div>
+        <!-- //editor -->
+
+    </main>
+    <!-- //main -->
+    
+    <!-- popup -->
+    <div class="popup-background"></div>
+    
+    <div class="popup" id="popup-folder">
+        <form id="folderForm">
+            <div class="form-group">
+                <label for="folderPath">폴더 생성 경로</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control path-input" id="folderPath" readonly>
+            </div>
+            <div class="form-group">
+                <label for="folderName">폴더 이름</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="folderName">
+            </div>
+            <div class="form-group text-right">
+                <button class="btn btn-primary">폴더 만들기</button>
+                <button class="popup-close btn btn-danger" type="button">취소</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="popup" id="popup-file">
+        <form id="fileForm">
+            <div class="form-group">
+                <label for="filePath">파일 생성 경로</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control path-input" id="filePath" readonly>
+            </div>
+            <div class="form-group">
+                <label for="fileName">파일 이름</label>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="fileName">
+            </div>
+            <div class="form-group">
+                <label for="fileExt">파일 확장자</label>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="fileExt">
+                    <option>html</option>
+                    <option>css</option>
+                    <option>js</option>
+                </select>
+            </div>
+            <div class="form-group text-right">
+                <button class="btn btn-primary">파일 만들기</button>
+                <button class="popup-close btn btn-danger" type="button">취소</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="popup" id="popup-image">
+        <div class="form-group">
+            <label for="imagePath">이미지 업로드 경로</label>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control path-input" id="imagePath" readonly>
+        </div>
+        <div class="form-group">
+            <label>이미지 드래그 & 드랍 영역</label>
+        </div>
+        <div class="form-group">
+            <label id="imageBox" for="imageName"></label>
+        </div>
+        <div class="form-group">
+            <input type="file" class="form-control hide" id="imageName" multiple>
+        </div>
+        <div class="form-group text-right image-btns">
+            <button class="btn btn-primary image-btn">이미지 업로드완료</button>
+            <button class="popup-close btn btn-danger">취소</button>
+        </div>
+    </div>
+    <!-- //popup -->
+
+    <script type="text/javascript" src="jquery/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+        
+  </body>
+</html>

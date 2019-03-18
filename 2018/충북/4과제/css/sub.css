@@ -1,0 +1,79 @@
+/* Sub Page */
+.page_header{width:100%; float:left}
+.content{width:100%; float:left; margin-top:30px; margin-bottom:30px; min-height:960px}
+
+	.content .page_title{font-size:36px; font-weight:bold; border-left:#369 solid 5px; height:36px; padding-left:15px; width:100%; float:left}
+		.content .page_title span{font-size:18px; padding-left:15px;}
+	.content .page_content{width:100%; float:left; margin-top:30px}	
+	
+	.content .sub_title{width:100%; font-size:24px; font-weight:800; text-align:center;}	
+	
+	/* Login */
+	.content .login{width:100%; text-align:center;}
+		.content .list td{border:#999 solid 1px; text-overflow: ellipsis; overflow:hidden; height:37px; white-space:nowrap}
+	.content .login_box{width:100%; max-width:700px; background:#f0f4f9; text-align:center; padding:40px 0; margin-bottom:50px; margin-top:50px}
+		.content .login_box h3{width:100%; margin:15px 0; float:left; font-size:30px; font-weight:700}
+		.content .login_box .input_box{width:90%; background:none; border:none; border-bottom:#ccc solid 1px; height:45px; margin-bottom:10px; padding-left:10px; color:#000}
+		.content .login_box select{width:90%; background:none; border:none; border-bottom:#ccc solid 1px; height:45px; margin-bottom:10px; padding-left:10px; color:#000}
+		.content .login_box .radio_box{padding:0 15px; font-size:16px; line-height:45px}
+		.content .login_box .submit{width:90%; background:#64a1ee; height:45px; border:none; color:#fff; margin-top:10px}
+		.content .login_box .submit2{width:45%; background:#64a1ee; height:45px; border:none; color:#fff; margin-top:10px}
+		.content .login_box .go{width:100%; font-size:12px; margin-top:20px}
+		.content .login_box .sns_login{width:44.9%; margin-top:10px;}
+		.content .login_box .capcha{width:90%; }
+			.content .login_box .capcha .w50{width:50%; float:left; vertical-align:bottom; height:100%; }
+			.content .login_box .capcha .button{padding-top:50px}
+				.content .login_box .capcha .w50 img{width:100%}
+				.content .login_box .capcha .w50 input{width:90%;}
+			.content .login_box .go a{padding:0 5px}
+			.content .login_box .capcha_refresh{cursor:pointer}
+			
+	.content .item_list{width:100%; float:left; font-size:12px;}
+		.content .item_list .search{width:100%; float:left; margin-bottom:50px; border:#000 solid 2px}
+		.content .item_list .search > div{width:100%; height:50px;}
+		.content .item_list .search > .tag_line{height:70px}
+			.content .item_list .search > div > div{height:50px; line-height:50px}
+			.content .item_list .search > div > div:nth-child(1){background:#525f78; color:#fff; width:10%; padding-left:10px; float:left; height:100%}
+			.content .item_list .search > div > div:nth-child(2){width:90%; float:left; border-bottom:#ccc solid 1px; padding:5px; height:100%; line-height:40px}	
+			.content .item_list .search > .tag_line > div{height:70px; line-height:70px}
+			.content .item_list .search > .tag_line > .tag{line-height:50px}
+			.content .item_list .search > div > .tag{overflow-y:hidden; overflow-x:scroll; text-overflow:clip; white-space: nowrap;}			
+			.content .item_list .search > div > .make{overflow-x:hidden}
+				.content .item_list .search > div > .tag button{padding:0px 15px; border-radius:5px; background:#fff; border:#000 solid 1px; height:30px; margin:0 10px}
+				.content .item_list .search > div > .tag button.select{border:#00ab33 solid 1px; background:#00ab33; color:#fff}
+				.content .item_list .search > div > .price input{padding-left:5px; height:30px; width:100px}
+	
+		.content .item_list .list{width:100%; float:left; font-size:12px;}
+			.content .item_list .list > div{width:100%; float:left; border:#ccc solid 2px; margin-bottom:40px}
+				.content .item_list .list > div > .img{width:20%; float:left; border:#ccc solid 1px}
+					.content .item_list .list > div > .img img{width:100%}
+				.content .item_list .list > div > .text{width:80%; float:left; padding:30px; padding-bottom:0}	
+					.content .item_list .list > div > .text .title{font-size:20px; font-weight:bold}
+						.content .item_list .list > div > .text .title span{font-size:16px; padding:3px; color:#fff; border-radius:3px; margin-left:10px}
+						.content .item_list .list > div > .text .title span.price{background:#FF6264}
+						.content .item_list .list > div > .text .title span.normal{background:#00ab33}
+					.content .item_list .list > div > .text .price{padding:10px 0; color:#f00; font-size:20px}	
+					.content .item_list .list > div > .text .tag{padding-top:40px; font-size:14px; line-height:1.3em}
+						.content .item_list .list > div > .text .tag span{padding:8px 15px; border-radius:5px; background:#00ab33; color:#fff;}
+					.content .item_list .list > div > .text .seller{padding-top:45px; text-align:right}
+					.content .item_list .list > div > .text .button{width:100%; margin-top:30px; text-align:right; margin-bottom:20px}
+						.content .item_list .list > div > .text .button button{padding:10px 15px; margin-left:10px; border-radius:5px}
+					
+		.content .item_detail{width:100%; float:left;}
+			.content .item_list .list > .check{height:40px; line-height:40px; border:none; text-align:right; font-size:20px}
+				.content .item_list .list > .check span{padding-left:40px}
+			.content .item_detail .price_list{border:#ccc solid 1px}
+				.content .item_detail .price_list > div{height:70px; font-size:15px; border-right:#ccc solid 1px; float:left; width:100%; line-height:70px; border-bottom:1px solid #ccc;}
+				.content .item_detail .price_list > .bold{font-weight:bold; border-bottom:#000 solid 3px}
+					.content .item_detail .price_list > div > div{border-right:#ccc solid 1px; height:70px; padding:0 10px}
+					.content .item_detail .price_list > div > .seller{width:10%; float:left}
+					.content .item_detail .price_list > div > .title{width:45%; float:left}	
+					.content .item_detail .price_list > div > .price{width:25%; float:left; text-align:right}
+						.content .item_detail .price_list > div > .price > div{height:35px; line-height:35px}
+						.content .item_detail .price_list > div > .price > div:nth-child(2){font-weight:bold}
+							.content .item_detail .price_list > div > .price > div > span:nth-child(1){color:#ff0000;font-weight:bold}
+							.content .item_detail .price_list > div > .price > div > span:nth-child(2){color:#0005FF;font-weight:bold}
+					.content .item_detail .price_list > div > .point{width:10%; float:left; text-align:center}
+					.content .item_detail .price_list > div > .post{width:10%; float:left; text-align:center}
+
+.number{height: 35px;}

@@ -1,0 +1,196 @@
+/*common.css*/
+
+	/*option*/
+	* { margin:0; padding:0; font-family:"Nanum Gothic"; }
+	ul li { list-style:none; }
+	a { text-decoration:none; }
+	body { font-size:10px; background-color:#f5f5f5; }
+	img { border:none; vertical-align:bottom; }
+
+	.container { width:1600px; margin:0 auto; }
+
+	/*12 grid*/
+	.row { margin:0 -10px; }
+	.clearflex:after , .row:after { content:""; display:block; clear:both; }
+	[class*="col-md"]{
+		width:100%;
+		float:left;
+		box-sizing:border-box;
+		padding:0 10px;
+	}
+	.fit { padding:0; }
+	.col-right { float:right; }
+	.col-center { margin: 0 auto; }
+
+	.col-md-1 { width: calc(100% / 12 * 1 ); }
+	.col-md-2 { width: calc(100% / 12 * 2 ); }
+	.col-md-3 { width: calc(100% / 12 * 3 ); }
+	.col-md-4 { width: calc(100% / 12 * 4 ); }
+	.col-md-5 { width: calc(100% / 12 * 5 ); }
+	.col-md-6 { width: calc(100% / 12 * 6 ); }
+	.col-md-7 { width: calc(100% / 12 * 7 ); }
+	.col-md-8 { width: calc(100% / 12 * 8 ); }
+	.col-md-9 { width: calc(100% / 12 * 9 ); }
+	.col-md-10 { width: calc(100% / 12 * 10 ); }
+	.col-md-11 { width: calc(100% / 12 * 11 ); }
+	.col-md-12 { width: calc(100% / 12 * 12 ); }
+
+	/* index.html */
+	
+	/*bg*/
+	.bg { position:fixed; z-index:999; width:100%; height:100%; background-color:rgba(0,0,0,0.7); opacity:0; z-index:-1; }
+	.bg span { float:right; font-size:3.0em; color:white; padding:20px 50px; cursor:pointer; }
+
+	/*login*/
+	.login { width:25%; height:300px; margin:0 auto; background-color:white; margin-top:300px; box-shadow:3px 3px 5px #333; border-radius:3px; display:none; }
+	.login div:nth-child(1) { text-align:center; }
+	.login h1 { font-size:2.2em; font-weight:normal; padding-top:15px;  }
+	.login h3 { padding-top:5px; }
+	.login input { width:90%; height:15px; padding:10px 10px; margin-top:3px; margin-left:-3px; border: solid 1px #c8c8c8; border-radius:3px; }
+	.login input:nth-child(1) { margin-top:50px; }
+	.login button { padding:10px 202px; margin-left:11px; background:#308bd8; color:white; font-size:1.0em; border:none; border-radius:3px; margin-top:10px; margin-left:-5px; }
+
+	/*join*/
+	.join { width:25%; height:520px; margin:0 auto; background-color:white; margin-top:200px; box-shadow:3px 3px 5px #333; border-radius:3px; display:none; }
+	.join div:nth-child(1) { text-align:center; }
+	.join h1 { font-size:2.2em; font-weight:normal; padding-top:15px;  }
+	.join h3 { padding-top:5px; }
+	.jo_co { margin-top:20px; }
+	.jo_co li { padding-top:20px; }
+	.join label { font-size:1.4em; float:left; padding:10px 20px; }
+	.join input { float:right; width:65%; height:15px; padding:10px 10px; margin-top:3px; margin-right:10px; border: solid 1px #c8c8c8; border-radius:3px; }
+	.join input:nth-child(1) { margin-top:50px; }
+	.join button { padding:10px 200px; margin-left:11px; background:#308bd8; color:white; font-size:1.4em; border:none; border-radius:3px; margin-top:30px; margin-left:0px; }
+	.join select { float: left; margin-top: 10px; }
+
+	/*upload*/
+	.upload { width:25%; height:300px; margin:0 auto; background-color:white; margin-top:200px; box-shadow:3px 3px 5px #333; border-radius:3px; display:none; }
+	.upload div:nth-child(1) { text-align:center; }
+	.upload h1 { font-size:2.2em; font-weight:normal; padding-top:15px;  }
+	.upload h3 { padding-top:5px; }
+	.upload li{width:100% !important; float:left !important; padding:10px;}
+	.upload label { font-size:1.4em; float:left;}
+	.upload input { float:left; height:15px; border: solid 1px #c8c8c8; border-radius:3px; }
+	.upload input:nth-child(1) { margin-top:50px; }
+	.upload select{float:left}
+	.upload button { padding:10px 200px; margin-left:11px; background:#308bd8; color:white; font-size:1.4em; border:none; border-radius:3px; margin-top:30px; margin-left:0px; }
+	
+	/*gallery*/
+	.gallery hr { margin-top: 20px; }
+	.gallery_img { width: 30px; height: 30px; border-radius: 15px; margin-left: 10px; margin-top: 20px; }
+	.gallery_name { font-weight:bold; line-height: 30px; font-size: 15px; margin-left:5px; }
+	.gallery_like { font-size:1.6em; float: right; cursor:pointer; line-height: 65px; margin-right: 10px; transition:.3s all; }
+	.gallery_like:hover { color:#308bd8; }
+	.gallery_text { font-size: 1.5em; line-height: 40px; }
+	.gallery_main { width: 100%; }
+	.gallery_delete { background:#e74c3c; color:#fff; border: none; width: 100%; float: left; height: 30px; cursor: pointer; }
+
+	/*comment*/
+	.comment { font-size: 2em; line-height: 50px; float: left; width: 100%; }
+	.comment_input { width: 85%; border:1px solid #ddd; height: 25px; float: left; margin-top: 5px; }
+	.comment_button { color:#fff; background:#308bd8; border:none; width: 10%; margin-left: 2.5%; height: 25px; margin-top: 5px; cursor: pointer; }
+	.comment_ul { float: left; width: 100%; margin-bottom: 5px; }
+	.comment_ul li { float: left; width: 100%; margin-top: 5px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; }
+	.comment_ul li:first-child { border-top: 1px solid #ddd !important; }
+	.comment_ul li:last-child { border-top: none; }
+	.comment_name { font-size: 1.4em; width: 100%; float: left; font-weight: bold; margin-top: 5px; }
+	.comment_text { font-size: 1.2em; width: 100%; float: left; margin-top: 5px; margin-bottom: 5px; }
+
+	/*profile*/
+	.profile { width: 100%; float: left; }
+	.profile_img { width: 30px; height: 30px; border-radius: 15px; margin-left: 10px; margin-top: 20px; float: left; }
+	.profile_name { font-weight:bold; line-height: 70px; font-size: 15px; margin-left:5px; float: left; }
+	.profile ul { width: 100%; float: left;  }
+	.profile li { width: 100%; float: left; padding: 10px 0;  box-sizing: border-box; border-bottom: 1px solid #333; }
+	.profile li:last-child { border-bottom: none; margin-bottom: 20px; }
+	.profile_left { width: 40%; float: left; box-sizing:border-box; font-size: 1.4em; padding: 10px; }
+	.profile_right { width: 60%; float: left; box-sizing:border-box; font-size: 1.4em; padding: 10px; }
+	.modify_btn { background:#308bd8; float: right; color:#fff; border: none; padding: 6px 10px; margin-top: 20px; margin-right: 20px; cursor: pointer; }
+
+	/*admin*/
+	.admin { width: 100%; float: left; }
+	.admin h1 { font-size: 2.3em; margin-top: 20px; margin-left: 10px; }
+	.admin table { width: 100%; float: left; margin-top: 10px; }
+	.admin tr { width: 80%; float: left; margin-left: 10%; border-bottom: 1px solid #333; line-height: 50px; }
+	.admin tr:last-child { margin-bottom: 30px; }
+	.admin th, .admin td { text-align: center; font-size: 1.4em; float: left; }
+	.admin th:nth-child(1), td:nth-child(1) { width: 20%; }
+	.admin th:nth-child(2), td:nth-child(2) { width: 25%; }
+	.admin th:nth-child(3), td:nth-child(3) { width: 20%; }
+	.admin th:nth-child(4), td:nth-child(4) { width: 25%; }
+	.admin th:nth-child(5), td:nth-child(5) { width: 10%; }
+	.admin_delete { background:#e74c3c; color:#fff; border: none; padding: 5px; cursor: pointer; }
+
+
+	/*header*/
+		.header { height:60px; background-color:#308bd8; color:white; box-shadow:1px 2px 3px #c8c8c8; position:fixed; }
+
+		/*logo*/
+		.logo { float: left; }
+		.logo img { width: 70%; margin-top: 9px; float: left; }
+
+		.membership { float:right; margin:14px 20px; }
+		.membership button { padding:5px 15px; border:none; background-color:#fff; font-size:1.0em; border-radius:1px; color:#308bd8; }
+		.membership button:hover { cursor:pointer; }
+
+	/*content*/
+		.content { margin-top:100px; }
+		.box { background-color:#fff; border-radius:3px; box-shadow:1px 2px 3px #e5e5e5; /*height: 600px;*/ }
+
+		/*left_content*/
+		.left_content { min-height:100px; }
+		.left_content h3 { padding:20px 0; font-size:1.6em; }
+		.left_content i { padding:0 5px; margin-left:-45px; }
+		.left_content li { width:100%; padding:10px 50px; font-size:1.4em; transition:all .2s ease; }
+		.left_content li:hover { background-color:#fff; box-shadow:1px 2px 3px #c8c8c8; border-radius:3px; color:#308bd8; cursor:pointer; }
+
+	
+		.categories { position:fixed; }
+
+		/*center_content*/
+		.feed_title { height:95px; }
+
+		.newsfeed { min-height:250px; margin-left:20px; }
+		.newsfeed > div > div { margin-top:20px; }
+
+		.feeds { min-height:300px; border: solid 1px #e5e5e5; margin-top:20px; }
+		.feed { height:100px; border: solid 1px #e5e5e5; }
+
+		.feed_image { float:left; width:30%; height:300px; overflow:hidden; border-radius:3px 0 0 3px; }
+		.feed_image img { width:150%; height:100%; margin-left:-50px; transition:all .3s;}
+
+		.feed_con { float:right; width:65%; height:300px; }
+		.feed_con h1 { font-weight:normal; font-size:3.0em; padding:20px 0; margin-top:10px; }
+		.feed_con .line { width:95%; height:1px; background-color:#e5e5e5; }
+		.feed_con p { width:95%; font-size:1.4em; line-height:1.6em; color:#666; padding-top:10px; }
+		.feed_con h3:nth-child(4) { margin-top:20px; }
+		.feed_con h3:nth-child(5) { margin-top:10px; }
+		.feed_con div:last-child { width:95%; margin-top:20px; }
+		.feed_con div:last-child button { float:right; margin-right:10px; background:#ffa000; border: none; color:white; padding:5px 10px; border-radius: 3px; transition:all .3s ease; }
+		.feed_con div:last-child button:hover { cursor:pointer; box-shadow:1px 2px 3px #c8c8c8;  }
+
+
+		/*right_contnet*/
+		.new_board { min-height:300px; float:right; margin-top:20px; }
+		.new_wiki { position:fixed; width:20%; min-height:500px; border: solid 1px #e5e5e5; }
+		.new_wiki h2 { padding:10px; }
+
+		/*else*/
+		.member_img { width: 30px; height: 30px; border-radius: 15px; }
+		.member_name { font-weight:bold; line-height: 30px; font-size: 15px; margin-left:5px; margin-right: 20px; }
+		.upload_btn { background:#308bd8; color:#fff; font-weight: bold; border:none; width: 100%; height: 30px; cursor: pointer; }
+
+		#uploadForm input[type=file] {
+			border: none;
+		}
+		#uploadForm label {
+			display: inline-block;
+			margin-right: 10px;
+		}
+		#uploadForm input[type=text] {
+			padding: 3px 5px;
+		}
+
+		.gallery_like.on {
+			color: royalblue;
+		}

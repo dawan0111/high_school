@@ -1,0 +1,72 @@
+----------   header   ------------
+Logo
+Home
+About
+Product
+Contact
+
+Lorem ipsum dolor sit amet,
+consectetur adipisicing elit
+sed do eiusmod tempor incididunt
+
+Learn more
+
+----------------------------------
+
+----------   section1   ----------
+Landmark
+Nature / Park
+Shopping
+Food
+
+[Landmark] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+[Nature / Park] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+[Shopping] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+[Food] Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+---------------------------------
+
+----------   section2   ---------
+716 Likes
+1K+ Joins
+62 Todays
+820 Shares
+
+---------------------------------
+
+----------   section4   ---------
+
+Contact Us
+Email
+Title
+Contents
+
+---------------------------------
+
+----------   footer   -----------
+
+About Us
+
+Lorem ipsum dolro sit amet,consectetur adipisicing elit, sed do eiusmod tempor incididunt ut albore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse clilum dolore eu fugiat nulla pariatur.
+
+Address: 010 - 1234 - 5678
+Fax: (02) 1234 - 5678
+Email: webSkills@gmail.com
+
+Gallery
+
+Image1
+Image2
+Image3
+Image4
+Image5
+Image6
+
+Social
+
+Copyright ¨Ï 2018 Webskills
+---------------------------------
+

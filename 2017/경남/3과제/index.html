@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3과제</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<script src="jquery/jquery-1.12.3.min.js"></script>
+	<script src="jquery-ui/jquery-ui.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="common.js"></script>
+<body>
+<div id="frame">
+	<header class="full_hidden">
+		<div class="buttons">
+			<a href="#" class="btn" data-type="save">저장</a>
+			<a href="#" class="btn" data-type="load">불러오기</a>
+			<input type="file" id="loadfile" style="display: none;">
+			<a href="#" class="btn" data-type="view">보기</a>
+		</div>
+		<h1></h1>
+	</header>
+	<nav class="row full_hidden">
+		<div class="col-sm-1 col-sm-offset-1">
+			<button class="btn image_add">삽입</button>
+			<input type="file" id="file" style="display: none">
+		</div>
+		<div class="col-sm-2 has-success">
+			<input type="text" class="form-control has-success font_text" placeholder="글자 내용">
+		</div>
+		<div class="col-sm-1 has-success">
+			<select class="form-control font_color">
+				<option selected value="">글자 색</option>
+				<option value="#ff0000">빨강</option>
+				<option value="#008000">초록</option>
+				<option value="#0000ff">파랑</option>
+				<option value="#ffff00">노랑</option>
+				<option value="#000000">검정</option>
+			</select>
+		</div>
+		<div class="col-sm-1 has-success">
+			<select class="form-control font_size">
+				<option selected>글자 크기</option>
+				<option>8pt</option>
+				<option>10pt</option>
+				<option>12pt</option>
+				<option>14pt</option>
+				<option>16pt</option>
+				<option>18pt</option>
+			</select>
+		</div>
+		<div class="col-sm-1">
+			<button class="btn btn-success text_add" style="padding: 5px; font-size: 11px;">텍스트 추가</button>
+		</div>
+		<div class="col-sm-2 has-warning">
+			<select class="form-control effect_box">
+				<option selected value="">효과</option>
+				<option value="view">나타나기</option>
+				<option value="fade">서서히 나타나기</option>
+				<option value="rotate">회전</option>
+				<option value="scale">커지기</option>
+			</select>
+		</div>
+		<div class="col-sm-1">
+			<button class="btn btn-warning effect_add">적용</button>
+		</div>
+		<div class="col-sm-1">
+			<button class="btn btn-danger child_delete">삭제</button>
+		</div> 
+	</nav>
+	<aside class="left slides full_hidden">
+		<div>
+			<div class="select"><span>1</span></div>
+			<div><span>2</span></div>
+		</div>
+		<button class="btn btn-primary slide_add">슬라이드 추가</button>
+		<button style="margin-top:10px" class="btn btn-danger slide_delete">슬라이드 제거</button>
+	</aside>
+	<div id="shell">
+		<span style="font-size:24pt" id="shellSelect" class="text">동해물과백두산</span>
+	</div>
+	<aside class="right state full_hidden">
+		<h3>슬라이드1</h3>
+		<ul>
+			<li class="element select">
+				텍스트1
+				<ul>
+					<li>내려오기</li>
+				</ul>
+			</li>
+
+			<li class="element">이미지1</li>
+		</ul>
+
+	</aside>
+</div>
+</body>
+</html>

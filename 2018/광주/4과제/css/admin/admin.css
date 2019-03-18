@@ -1,0 +1,756 @@
+#header {
+    background-color: #333;
+}
+
+#header .hd-top {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #0e3e58;
+    position: relative;
+    padding:10px 0;
+}
+
+#header .hd-top #logo {
+    float: left;
+}
+
+#header .hd-top #logo h1 a {
+    color: #fff;
+    font-size: 20px;
+}
+
+#header .hd-top #logo h1 a span {
+    color: #2cc126;
+}
+
+#header .hd-top p {
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
+}
+
+#header .hd-top > .home-move {
+    position:absolute;
+    right:120px;
+    bottom:3px;
+    color:#fff;
+    font-size:12px;
+    background-color:#5f5f5f;
+    padding:3px 15px;
+    border:1px solid #fff;
+}
+
+#header .hd-top p a {
+    color: #fff;
+    font-size: 14px;
+}
+
+#header .hd-bot {
+    float: left;
+    width: 100%;
+    padding: 8px 0;
+    position: relative;
+}
+
+#header .hd-bot > ul {
+    float: left;
+    width: 100%;
+    background-color:#5f5f5f;
+    padding:8px 15px;
+}
+
+#header .hd-bot > ul > li {
+    float: left;
+    
+}
+
+#header .hd-bot > ul > li:nth-child(1) {
+    margin-left:3px;
+}
+
+#header .hd-bot > ul > li > a {
+    color: #ebebeb;
+    font-size: 15px;
+}
+
+#header .hd-bot > ul > li:nth-child(3) > a {
+    color: #fff;
+}
+
+#header .hd-bot .submenu {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+}
+
+#header .hd-bot .submenu span {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    padding: 3px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#header .hd-bot .submenu > ul {
+    float: left;
+    width: 15%;
+}
+
+#header .hd-bot .submenu > ul > li {
+    line-height: 25px;
+}
+#header .hd-bot .submenu > ul > li > a:hover {
+    color:#79a2e3;
+}
+
+#header .hd-bot .submenu > ul > li:nth-child(1) {
+    float:left;
+    margin-bottom: 10px;
+    background-color:#6d6d6d;
+    padding:3px 25px;
+}
+
+#header .hd-bot .submenu > ul > li:not(:nth-child(1)){
+    float:left;
+    width:100%;
+}
+
+#header .hd-bot .submenu li a {
+    color: white;
+    font-size: 12px;
+    color: #ccc;
+}
+
+#header .hd-bot .submenu > ul > li:nth-child(1) a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.admin-main {
+    float: left;
+    width: 100%;
+}
+
+.admin-main > ul {
+    float: left;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.admin-main > ul > li {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #dfdfdf;
+    font-size: 14px;
+    border: 1px solid #bbb;
+}
+
+.login-frm {
+    float: left;
+    width: 100%;
+}
+
+.login-frm .frm-title {
+    float: left;
+    width: 100%;
+    margin: 20px 0 10px;
+}
+
+.login-frm form {
+    float: left;
+    width: 100%;
+}
+
+.login-frm form input {
+    float: left;
+    width: 100%;
+    border-radius: 3px;
+    height: 33px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding-left: 5px;
+}
+
+.login-frm form button {
+    float: right;
+    padding: 6px 8px;
+    background-color: #ffffff;
+    color: #222;
+    border: 1px solid #222;
+    border-radius: 3px;
+    margin-bottom: 25px;
+}
+
+.page-title {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.page-title h3 {
+    background-color: transparent;
+}
+
+.menu_set .menu_list {
+    float: left;
+    width: 100%;
+}
+
+.menu_set .menu_frm {
+    float: left;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.menu_set .menu_frm span {
+    color: 222;
+    font-size: 14px;
+}
+
+.menu_set .menu_frm form {
+    float: left;
+    width: 100%;
+}
+
+.menu_set .menu_frm form .dan-menu {
+    float: left;
+    margin-right: 50px;
+}
+
+.menu_set .menu_frm form .dan-menu h4 {
+    color: 222;
+}
+
+.menu_set .menu_frm form .menu-name {
+    float: left;
+    margin-right: 20px;
+}
+
+.menu_set .menu_frm form .menu-name input {
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+}
+
+.menu_set .menu_frm form .menu-switch {
+    float: left;
+}
+
+.menu_set .menu_frm form button {
+    float: right;
+    padding: 3px 8px;
+    background-color: #fff;
+    border: 1px solid #222;
+}
+
+.menu_set .menu-li {
+    float: left;
+    width: 100%;
+    background-color: #dfdfdf;
+    margin-bottom: 10px;
+    padding: 15px 15px;
+    border-radius: 5px;
+}
+
+.menu_set .menu-li .dan-menu {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 15px;
+}
+
+.menu_set .menu-li {
+    float: left;
+}
+
+.menu_set .menu-li .menu-name {
+    float: left;
+    margin-right: 30px;
+}
+
+.menu_set .menu-li .menu-name input {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 30px;
+}
+
+.menu_set .menu-li span {
+    font-size: 14px;
+}
+
+.menu_set .menu-li .dan2-add,
+.menu_set .menu-li .dan3-add {
+    float: left;
+    margin-left: 20px;
+}
+
+.menu_set .menu-li .dan2-add button,
+.menu_set .menu-li .two-menu .dan3-add button {
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #333;
+    border-radius: 3px;
+    height: 30px;
+    padding: 0 5px;
+}
+
+.menu_set .menu-li .two-menu {
+    float: left;
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin-top: 15px;
+}
+
+.menu_set .menu-li .two-menu .menu-li {
+    background-color: transparent;
+}
+
+.menu_set .menu-li .two-menu .dan3-add {
+    float: left;
+    margin-left: 20px;
+}
+
+.menu_set .menu-li .thrid-menu {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.menu_set .menu-li .thrid-menu > ul > li {
+    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.menu_set .menu-li .menu-switch {
+    float: left;
+    margin-left:
+}
+
+.menu_set .menu-li .menu-switch select {
+    height: 30px;
+}
+
+.main-image table {
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.main-image table thead tr th {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 15px 0;
+    border: 1px solid #ccc;
+    color: #555;
+}
+
+.main-image table tbody tr td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.main-image table tbody tr td:nth-child(2) button,
+.main-image table tbody tr td:nth-child(3) button,
+.main-image table tbody tr td:nth-child(4) button {
+	padding:2px 5px;
+	border:1px solid #ccc;
+	background-color:#000;
+	color:#fff;
+}
+
+.main-image table tbody tr td span {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+}
+
+.main-image table tbody tr td span .btn {
+	float:left;
+	width:100%;
+	text-align:center;
+}
+
+.main-image table tbody tr td span .btn button {
+	margin-top:10px;
+	padding:2px 5px;
+	border:1px solid #ccc;
+		background-color:#000;
+	color:#fff;
+}
+
+.main-image table tbody tr td .f_find {
+	float:left;
+	background-color:#bbb !important;
+	margin-right:10px;
+	
+}
+
+.main-image table tbody tr td span input[type='text'] {
+    width: 90px;
+    height: 25px;
+    border: 1px solid #ddd;
+}
+
+.main-image table tbody tr td span select {
+    width: 80px;
+    height: 25px;
+}
+
+.main-image .add-btn-area {
+    float: left;
+    width: 100%;
+}
+
+.main-image .add-btn {
+    float: left;
+    padding: 8px;
+    18px;
+    background-color: #fff;
+    border: 1px solid #777;
+    margin: 10px 0;
+}
+
+.main-image .image-remove {
+    padding: 5px 8px;
+    background-color: #8d2a2a;
+    color: #fff;
+}
+
+.main-image .rotaction-sec {
+    float: right;
+}
+
+.main-image .rotaction-sec > input {
+    float: left;
+    width: 50px;
+    height: 27px;
+    border: 1px solid #ccc;
+    padding-left: 3px;
+}
+
+.main-image .rotaction-sec > p {
+    line-height: 27px;
+    float: left;
+    margin-left: 10px;
+}
+
+.main-image .ic-remove {
+    height: 25px;
+    padding: 0 5px;
+}
+
+.main-page .dan-add-btn {
+    float: left;
+    width: 100%;
+    margin: 30px 0 15px;
+}
+
+.main-page .dan-add-btn button {
+    float: right;
+    padding: 5px 8px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #222;
+}
+
+.main-page .dan-list .add-list {
+    float: left;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #efefef;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.main-page .dan-list .add-list p {
+    color: #666;
+    font-size: 14px;
+}
+
+.main-page .dan-list .list {
+    float: left;
+    width: 100%;
+    background-color: #656565;
+    border: 1px solid #ddd;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.main-page .dan-list .list p {
+    float: left;
+    margin-right: 50px;
+}
+
+.main-page .dan-list .list .m-cont li {
+    color:#000;
+}
+
+.main-page .dan-list .list button {
+    padding: 4px 10px;
+    background-color: #333;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    margin-right: 10px;
+    color:#fff;
+}
+
+.board-set .board-cnt {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.board-set .board-table {
+    float: left;
+    width: 100%;
+}
+
+.board-set .board-table table {
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.board-set .board-table table table:nth-child(1) {
+    text-align: center;
+}
+
+.board-set .board-table table thead tr th {
+    background-color: #efefef;
+    padding: 8px 0;
+    border: 1px solid #ccc;
+}
+
+.board-set .board-table table tbody tr td {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.board-set .board-table table tbody tr td:nth-child(3) {
+	text-align:center;
+}
+
+.board-set .board-table table tbody tr td button {
+	background-color:transparent;
+	text-align:center;	
+}
+
+.board-set .board-table > table > tbody > tr > td:nth-child(1) {
+    background-color: #eee;
+    text-align: center;
+}
+
+.board-set .board-table table tbody tr td input[type='text'] {
+    float: left;
+    width: 280px;
+    height: 27px;
+    background-color: #efefef;
+    border: 1px solid #bbb;
+}
+
+.board-set .board-table table tbody tr td .b_type img {
+    vertical-align: middle;
+}
+
+.board-set .board-table table tbody tr td .b_type span {
+    float: left;
+    width: 100%;
+}
+
+.board-set .board-table table tbody tr td .b_type span:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.board-set .board-table table tbody tr td .b_type .detail_set {
+    padding: 3px 8px;
+    background-color: #fff;
+    border: 1px solid #222;
+}
+
+.board-set .board-table table tbody tr.hd-text td {
+    position: relative;
+}
+
+.board-set .board-table table tbody tr.hd-text td p {
+    float: left;
+    margin-bottom: 20px;
+}
+
+.board-set .board-table table tbody tr.hd-text td .hd-text-set {
+    float: right;
+    padding: 3px 8px;
+    background-color: #fff;
+    border: 1px solid #222;
+}
+
+.board-set .board-table table tbody tr.hd-text td .hd-text-list {
+    float: left;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.board-set .board-table table tbody tr.hd-text td .hd-text-list input {
+    float: left;
+    width: 15%;
+    height: 27px;
+    margin-right: 10px;
+}
+
+.board-set .board-table table tbody tr.hd-text .hd-text-add {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 27px;
+    padding: 0 6px;
+    background-color: #efefef;
+    border: 1px solid #bbb;
+}
+
+.board-set .board-table table tbody tr.f_upload td > span:nth-child(1) {
+    float: left;
+    width: 100%;
+}
+
+.board-set .board-table table tbody tr.f_upload td button {
+    padding: 3px 8px;
+    background-color: #fff;
+    border: 1px solid #222;
+}
+
+.board-set .board-table table tbody tr.f_upload td p {
+    float: left;
+}
+
+.board-set .board-table table tbody tr.f_upload td .file-set {
+    float: right;
+}
+
+.board-set .board-table table tbody tr.f_upload td span {
+    float: left;
+}
+
+.board-set .board-table table tbody tr.hd-ft td .set-btn {
+    float: right;
+    padding: 3px 8px;
+    background-color: #fff;
+    border: 1px solid #222;
+}
+
+.board-set .board-table table .set_table {
+    border-collapse: collapse;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.board-set .board-table table .set_table tbody tr td:nth-child(1) {
+    background-color: #efefef;
+}
+
+.board-set .board-table table tbody tr.hd-ft .board-text {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.board-set .board-table table tbody tr.hd-ft .board-text span {
+    position: absolute;
+    height: 35px;
+    padding-left: 5px;
+    padding-right: 15px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    line-height: 35px;
+    font-size: 12px;
+}
+
+.board-set .board-table table tbody tr.hd-ft .board-text textarea {
+    float: left;
+    width: 100%;
+    height: 350px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.menu-set-btn {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 0px 0 15px;
+}
+
+.menu-set-btn button {
+    display: inline-block;
+    padding: 10px 12px;
+    background-color: #333;
+    color: #fff;
+}
+
+.menu_contents table {
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom:50px;
+}
+
+.menu_contents table thead tr th {
+    font-weight: bold;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 7px 0;
+}
+
+.menu_contents table tbody tr td {
+    border: 1px solid #ccc;
+    padding: 12px 5px;
+    font-size: 14px;
+}
+
+.menu_contents table tbody tr td {
+    
+}
+
+.menu_contents .cont-change {
+    float: right;
+    padding: 5px 8px;
+    background-color: #f4f4f4;
+    border: 1px solid #bbb;
+}
+
+#footer {
+    background-color: #333;
+    padding: 13px 0;
+}
+
+#footer .copy {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}

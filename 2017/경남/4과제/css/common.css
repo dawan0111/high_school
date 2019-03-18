@@ -1,0 +1,514 @@
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../fonts/lato-bold.eot');
+    src: url('../fonts/lato-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-bold.woff') format('woff'),
+         url('../fonts/lato-bold.ttf') format('truetype'),
+         url('../fonts/lato-bold.svg#LatoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-regular';
+    src: url('../fonts/lato-regular.eot');
+    src: url('../fonts/lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato-regular.woff') format('woff'),
+         url('../fonts/lato-regular.ttf') format('truetype'),
+         url('../fonts/lato-regular.svg#LatRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'p22_corinthia';
+    src: url('../fonts/p22_corinthia.eot');
+    src: url('../fonts/p22_corinthia.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/p22_corinthia.woff') format('woff'),
+         url('../fonts/p22_corinthia.ttf') format('truetype'),
+         url('../fonts/p22_corinthia.svg#P22Corinthia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.p22{
+    font-family:"p22_corinthia";
+}
+
+.glyphicon{
+    margin-right:5px;
+}
+.light{
+    background-color:yellow;
+    color:red;
+}
+
+*{
+    font-family:"lato-regular";
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+}
+a{color:inherit;}
+a:hover{
+    color:inherit;
+}
+
+/*header*/
+#back{
+    position: absolute;
+    width:100%;
+    height:205px;
+    z-index: -1;
+    background-image:url(../img/jeju6.jpg); 
+    background-size:100% auto;
+    background-position:0 -200px;
+}
+header{
+    background-color:rgba(0,0,0,0.2);
+    height:40px;
+    color:#fff;
+    line-height:40px;
+    vertical-align: middle;
+}
+header .login{
+    float:right;
+    font-size:1.1em;
+    text-align:right;
+    margin-right:20px;
+    display: inline-block;
+} 
+.logo{
+    height:120px;
+    position: relative; 
+
+}
+.logo img{
+    display: inline-block;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:13%;
+    cursor:pointer;
+}
+nav{
+    height:45px; 
+    background-color:rgba(0,0,0,.3);
+    text-align:center; 
+    border-bottom:1px solid #999;
+} 
+nav li{
+    color:white;
+    display: inline-block;
+    width:120px;
+    line-height:45px;
+    vertical-align: middle;
+    transition:background-color 0.3s;
+    cursor:pointer;
+}
+nav li:hover{
+    background-color:rgba(255,255,255,.3);
+}
+nav li.select{
+    background-color:rgba(255,255,255,.3);   
+}
+/* */
+mark {
+    background: yellow;
+    color: red;
+}
+
+/* main */
+.items{
+    width:80%; 
+    position: relative;
+    margin:0 auto; 
+}
+.items .price{
+    color:#ef2705;
+}
+.rank{
+    width:100%;
+    height:380px;
+    margin-bottom:40px;
+    display: flex;
+    justify-content: space-between;
+}
+#searchForm{
+    width:80%;
+    position: relative;
+    margin:0 auto;
+    text-align:-webkit-center;
+}
+#search{
+    margin-top:20px;
+    height:45px;
+    width:100%;
+    border:1px solid #2f85a0;
+    border-radius:5px;
+    background:#fff;
+}
+#search input{
+    border-radius:5px;
+    font-size:16px;
+    width:90%;
+    padding:10px;
+    border:0px;
+    outline:none;
+    float:left;
+}
+#search button{
+    width:10%;
+    height:100%;
+    border:0px;
+    background:#2f85a0;
+    outline:none;
+    float:right;
+    color:#fff;
+}
+.rank > div{
+    display: inline-block;
+    width:45%;
+    height:100%;
+    text-align:center;
+    border:1px solid rgba(0,0,0,.3);
+    position: relative;
+    cursor:pointer;
+}
+.item div div{
+    position: absolute;
+    width:100%;
+    height:20%;
+    background-color:rgba(0,0,0,.5);
+    color:white;
+    bottom:0;
+}
+.all div div{
+    height:25%;
+}
+.all div h3{
+    font-size:1.4em;
+}
+.all div p{
+    font-size:1em;
+}
+.item div p{
+    font-size:1.1em;
+}
+.item div h3{
+    margin-top:10px;
+}
+.item span+span{
+    margin-left:10px;
+}
+.title{
+    display: inline-block;
+    width:100%;
+    border-bottom:2px solid rgba(0,0,0,.3);
+    font-size:2em;
+}
+.rank > div img{
+    max-width:100%;
+    width:auto;
+    height:100%;
+}
+.all{
+    width:100%;
+    display: inline-block;
+    margin-top:-26px;
+}
+
+.all > div{
+    display: inline-block;
+    margin-left:5px;
+    width:24%;
+    height:250px;
+    text-align:center;
+    margin-top:30px;
+    border:1px solid rgba(0,0,0,.3);
+    position: relative;
+    cursor:pointer;
+}
+
+.all > div img{
+    max-width:100%;
+    width:auto;
+    height:100%;
+}
+.dis{
+    text-decoration: line-through;
+}
+/* */
+
+
+/* view */
+#view{
+    width:85%;
+    position: relative;
+    margin:0 auto;
+}
+#view .name{
+    background-color:#f5f5f5;
+    border-top:1px solid #e0e0e0;
+    border-bottom:1px solid #e0e0e0;
+    margin-top:30px;
+    padding-left:20px;
+}
+#view .wrap{
+    width:100%;
+    height:450px;
+    display: flex;
+    margin-top:20px;
+    justify-content: space-around;
+}
+#view .imgBox{
+    width:45%;
+    height:100%;
+    display: inline-block;
+    border:1px solid rgba(0,0,0,.3);
+    text-align:center;
+}
+#view .imgBox img{
+    max-width:100%;
+    width:auto;
+    height:100%;
+}
+#view .controll{
+    width:40%;
+    height:100%;
+    display: inline-block;
+}
+#view .info{
+    width:100%;
+    height:70%;
+    display: inline-block;
+    border:1px solid #c6cae2;
+}
+#view .info .price{
+    width:100%;
+    height:30%;
+    background-color:#f7f7f7;
+}
+#view .chart{
+    width:100%;
+    padding:15px;
+    position: relative;
+}
+.price .chart{
+    height:100%;
+}
+    .chart > div{
+        position: absolute;
+        top:50%;
+        transform:translateY(-50%);
+    }
+    .chart .tit{
+        display: inline-block;
+        width:35%;
+        font-size:1.1em;
+        font-weight:bold;
+        color:#888;
+    }
+    .chart .val{
+        display: inline-block;
+        width:60%;
+        left:35%;
+    }
+    .price .sale{
+        display: inline-block;
+        color:#666;
+        margin:0;
+    }
+    .price .sale span{
+        text-decoration:line-through;
+        margin-right:8px;
+    }
+    .price .chart .val{
+        color:#ef2705;
+    }
+    .price .chart .listPrice{
+        font-size:1.5em;
+        font-weight:bolder;
+    }
+    .info > .chart{
+        height:16%;
+    }
+    .total .val{
+        color:#ef2705;
+    }
+    .total .val span{
+        font-size:1.8em;
+        font-weight:bolder;
+    }
+    #view .count button{
+        width:21px;
+        height:21px;
+        border-radius:100%;
+        border:1px solid #aaa;
+        background-color:#fff;
+        font-size:1.1em;
+    }
+    #view .count input{
+        margin:0 5px;
+        width:30px;
+        text-align:center;
+    }
+#view .buttons{
+    margin-top:20px;
+    width:100%;
+    text-align:center;
+}
+#view .buttons button{
+    font-size:1.1em;
+    font-weight:bolder;
+    border:1px solid #cbcdd0;
+    padding:10px 50px;
+}
+#view .buttons .cart{
+    background-color:#fff;
+    color:#285bdc;
+    margin-right:6px;
+}
+#view .buttons .buy{
+    margin-left:6px;
+    background-color:#285bdc;
+    color:#fff;
+}
+/* */
+
+
+/* login */
+#login{
+    width:50%;
+    position: relative;
+    margin:0 auto;
+    margin-top:25px;
+}
+#login form{
+    margin-top:15px;
+    width:100%;
+    float:left; 
+}
+#login .inputs{
+    width:75%;
+    float:left;
+}
+#login button{
+    float:left;
+    margin-left:20px;
+    height:83px;
+    width:20%;
+    color:white;
+    font-size:1.4em;
+}
+/* */
+
+
+/* JOIN */
+#join{
+    width:50%;
+    position: relative;
+    margin:0 auto;
+    margin-top:25px;
+}
+#join .buttons{
+    display: inline-block;
+    margin-top:10px;
+    text-align:center;
+    width:100%;
+}
+#join .buttons button{
+    padding:12px 50px;
+}
+#join .butotns .cancel{
+    margin-right:10px;
+}
+#join .buttons .ok{
+    margin-left:10px;
+}
+/* */
+
+/* analysis */
+#analysis{
+    width:1000px;
+    position: relative;
+    margin:0 auto;
+    margin-top:20px;
+}
+#analysis > div{
+    width:1000px;
+    display: inline-block;
+}
+#analyser{
+    width:1000px;
+    height:450px;
+    margin-bottom:80px;
+    position: relative;
+    border:1px solid #888;
+}
+#analyser span{
+    position: absolute;
+    display: inline-block;
+}
+/* */
+
+
+/* stock */
+#stock{
+    width:70%;
+    position:relative;
+    margin:0 auto;
+    margin-top:20px;
+}
+#stock form .controll{
+    float:right;
+}
+/* */
+
+
+/* Item Add */
+#itemAdd{
+    width:50%;
+    position: relative;
+    margin:0 auto;
+    margin-top:20px;
+}
+#itemAdd button{
+    float:right;
+}
+/* */
+
+
+/* Discount */
+#dc{
+    width:70%;
+    position: relative;
+    margin:0 auto;
+    margin-top:20px;
+}
+#dc .controll{
+    float:right;
+}
+/* */
+
+
+/* Shopping cart */
+#cart{
+    width:70%;
+    position:relative;
+    margin:0 auto;
+    margin-top:20px;
+}
+/* */
+
+
+/* list */
+#list{
+    width:70%;
+    position: relative;
+    margin:0 auto;
+    margin-top:20px;
+}
+/* */
+

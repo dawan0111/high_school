@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>업로드</title>
+	<link rel="stylesheet" href="./css/css.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<h1>
+				<a href="./index.html">YEOSU STREAMING</a>
+			</h1>
+		</div>
+		<div class="search">
+			<div>
+				<input type="text" placeholder="검색">
+				<button><img src="./images/search.png" alt="icon"></button>
+			</div>
+		</div>
+		<div id="user">
+			<a href="./join.html" class="page  login-tag no-login">회원가입</a>
+			<a href="./login.html" class="page login-tag no-login">로그인</a>
+			<span class='page logout login-tag yes-login'>로그아웃</span>
+			<a class='user login-tag yes-login go-user' href='./user.html'>
+				<img src='./images/image.jpg' alt='profile' class='profile'>
+			</a>
+		</div>
+	</header>
+	<form class="upload_wrap" id="uploadForm">
+		<div class="upload">
+			<img src="./images/upload.png" alt="icon">
+			<p>업로드할 파일 선택</p>
+			<p>또는 동영상 파일을 드래그 앤 드롭</p>
+		</div>
+		<div class="upload_contents">
+			<div>
+				<p class="title">제목</p>
+				<input type="text" class="input" id="title">
+				<p class="sub_contents">영상 설명</p>
+				<textarea class="input" id="content"></textarea>
+			</div>
+			<div>
+				<p>영상 표지</p>
+				<div class="image_upload">
+					<img class='sumnail' src="./images/img_upload.jpg" alt="이미지를 선택해주세요">
+				</div>
+				<p>카테고리</p>
+				<input type="checkbox" id="cate1" name="cate[]" value="오동도">
+				<input type="checkbox" id="cate2" name="cate[]" value="거문도백도">
+				<input type="checkbox" id="cate3" name="cate[]" value="향일암">
+				<input type="checkbox" id="cate4" name="cate[]" value="금오도 비렁길">
+				<input type="checkbox" id="cate5" name="cate[]" value="여수세계 박람회장">
+				<input type="checkbox" id="cate6" name="cate[]" value="진남관">
+				<input type="checkbox" id="cate7" name="cate[]" value="여수밤바다/산단야경">
+				<input type="checkbox" id="cate8" name="cate[]" value="영취산 진달래">
+				<input type="checkbox" id="cate9" name="cate[]" value="여수해상 케이블카">
+				<input type="checkbox" id="cate10"name="cate[]"  value="여수 이순신 대교">
+				<label for="cate1" class="cate">오동도</label>
+				<label for="cate2" class="cate">거문도백도</label>
+				<label for="cate3" class="cate">향일암</label>
+				<label for="cate4" class="cate">금오도 비렁길</label>
+				<label for="cate5" class="cate">여수세계 박람회장</label>
+				<label for="cate6" class="cate">진남관</label>
+				<label for="cate7" class="cate">여수밤바다/산단야경</label>
+				<label for="cate8" class="cate">영취산 진달래</label>
+				<label for="cate9" class="cate">여수해상 케이블카</label>				
+				<label for="cate10" class="cate">여수 이순신 대교</label>
+				<p class="upload_btn">업로드</p>
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		var video_file;
+		var img_file = null;
+		var user;
+
+		var $videoFile = $("<input />", {
+			type : "file",
+			id : "video_file",
+			change () {
+				var file = $(this)[0].files[0];
+				videoUpload(file);
+			},
+		});
+
+		var $imageFile = $("<input />", {
+			type : "file",
+			id : "image_file",
+			change () {
+				var file = $(this)[0].files[0];
+				imageUpload(file);	
+			},
+		});
+
+		Storage.open("list").done(() => {
+			Storage.getTable("member").done((members) => {
+				user = members.get("id", login)[0];
+			});
+		});
+
+		$(".upload_contents").hide();
+
+		$(".upload").on({
+			click () {
+				$videoFile.click();
+			},
+			"dragover drop" (e) {
+				e.preventDefault();
+
+				if(e.type == "drop") {
+					var file = e.originalEvent.dataTransfer.files[0];
+					videoUpload(file);
+				};
+			},
+		});
+		$(".sumnail").on({
+			click () {
+				$imageFile.click();
+			},
+		})
+		$("#uploadForm").on({
+			submit (e) {
+				e.preventDefault();
+				var msg = [];
+
+				var data = {
+					id : login,
+					name : user.firstName+user.endName,
+					title : $("#title").val(),
+					content : $("#content").val(),
+					tag : [],
+					image : img_file,
+					video : video_file,
+					date : new Date(),
+				};
+
+				$("input[type='checkbox']:checked").each(function(idx, el) {
+					data.tag.push($(el).val());
+				});
+
+				if(
+					data.tag.length == 0 ||
+					data.title == "" ||
+					img_file == null ||
+					data.content == ""
+				) {
+					alert("제목, 영상 설명, 영상 표지, 카테고리를 모두 입력해주세요.");
+					return false;
+				};
+
+				Storage.table("video").put(data).onsuccess = function() {
+					redirect("/user.html?id="+login, "업로드가 완료되었습니다.");
+				};
+			},
+		})
+		$(".upload_btn").on({
+			click () {
+				$("#uploadForm").submit();
+			},
+		});
+
+		function videoUpload(file) {
+			if(file.type.match(/^video\/.+$/) == null) {
+				alert("동영상을 업로드 해주세요.");
+			} else {
+				video_file = file;
+				$(".upload").remove();
+				$(".upload_contents").show();
+			};
+		};
+
+		function imageUpload(file) {
+			if(file.type.match(/^image\/.+$/) == null) {
+				alert("이미지를 업로드 해주세요.");
+			} else {
+				img_file = file;
+				$(".sumnail").attr("src", URL.createObjectURL(img_file));
+			};
+		};
+	</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS DOCUMENT */
+
+/* ALL */
+* {margin:0; padding:0; list-style:none; box-sizing:border-box;}
+
+/* SEMANTIC TAG */
+body{background:rgb(242,242,242);}
+
+/* OFFTEN TAG */
+*:before {margin:0 auto; padding:0; box-sizing:border-box;}
+*:after {margin:0 auto; padding:0; box-sizing:border-box;}
+a {color:inherit; text-decoration:none;}
+label, button {cursor:pointer;}
+h1, h2, h3, h4, h5, h6 {font-weight:bold;}
+p {font-weight:normal; line-height:1.2;}
+
+/* override bootstrap */
+.btn-primary,
+.btn-primary:hover, 
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:active:hover, 
+.btn-primary:active:focus,
+.open > .dropdown-toggle.btn-primary,
+.open > .dropdown-toggle.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary:active,
+.open > .dropdown-toggle.btn-primary:focus{background:#4285f4; border:1px solid #4285f4; outline:none; box-shadow:none;}
+.glyphicon{margin-right:10px;}
+
+/* header */
+header{display:flex; width:100%; padding:18px 40px; background:#fff; box-shadow:0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -2px rgba(0,0,0,0.2); position:fixed; top:0; left:0; z-index:10;}
+header .logo{display:flex; min-width:280px;}
+header .dirPath{display:flex; flex:1 1 auto;}
+header .dirPath .path{display:inline-block;}
+header .dirPath .path .text{display:inline-block; height:34px; line-height:34px; padding:0 6px; font-size:18px; font-weight:bold;vertical-align:top; font-family:Nanum Gothic; cursor:pointer;}
+header .dirPath .path .text.prev{color:#777;}
+header .dirPath .path .right-btn{display:inline-block; width:34px; text-align:center; padding-top:5px;}
+header .dirPath .path .right-btn svg{width:24px; height:24px; fill:#383838;}
+header .btn-wrap{display:flex;}
+header .btn-wrap .btn{margin-right:10px;}
+header .btn-wrap .btn:last-child{margin-right:0;}
+
+/* main */
+main{display:flex; width:100%; height:100vh; min-height:640px; padding-top:70px; position:relative;}
+main aside {min-width:297px; max-width:297px; padding:18px 40px; background:#4285f4; overflow:auto;}
+main aside ul {width:100%; margin-bottom:18px;}
+main aside ul li {width:100%; height:48px; line-height:48px; margin-bottom:18px; background:#fff; border-radius:4px; overflow:hidden; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);}
+main aside ul li.title {color:#fff; margin-bottom:0; background:none; box-shadow:none;}
+main aside ul li span {display:inline-block; width:50px; height:48px; padding:0 10px 0 16px; vertical-align:top;}
+main aside ul li span svg {width:24px; height:24px; fill:#8f8f8f; vertical-align:middle;}
+main aside ul li a {display:inline-block; max-width:125px; overflow:hidden;}
+
+main .editor {width:100%; min-width:1200px; padding:30px 40px 0 40px;}
+main .editor .editor-tab {display:flex; width:100%; height:66px; padding:15px 10px 15px 20px; background:#263238; border-top-left-radius:4px; border-top-right-radius:4px;}
+main .editor .editor-tab div {position:relative; width:calc(100% / 12 * 1.5); height:36px; line-height:36px; padding:0 10px; margin-right:10px; background:rgb(73,85,91); color:#ECEFF1; border-radius:4px; overflow:hidden;}
+main .editor .editor-tab div.this {background:rgba(55,71,79,1); color:#fff; box-shadow:0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);}
+main .editor .editor-tab div .editor-text {display:inline-block; max-width:150px; word-break:break-all;}
+main .editor .editor-tab div .editor-close {position:absolute; top:45%; right:10px; transform:translateY(-50%); font-size:15px; font-weight:bold; font-family:sans-serif; cursor:pointer;}
+main .editor textarea {width:100%; height:calc(100vh - 240px); min-height:400px; padding:14px; background:rgba(38,50,56,0.9); color:#fff; border:none; border-bottom-left-radius:4px; border-bottom-right-radius:4px; resize:none; outline:none;}
+
+.popup-background {display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.7); z-index:999;}
+.popup {display:none; width:400px; padding:30px 20px 10px 20px; position:fixed; top:40%; left:50%; transform:translate(-50%, -50%); background:#fff; border-radius:4px; z-index:1001;}
+
+#imageBox {width:100%; height:280px; background:#ddd; border-radius:4px; border:2px dashed #ccc; overflow: auto;}
+#filelist {margin-bottom: 0px;}
+
+.click-menu {
+	position: absolute;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 150px;
+	height: 45px;
+	line-height: 45px;
+	padding-left: 10px;
+	background: #fff;
+	border-right: 10px solid royalblue;
+	border-radius: 3px;
+	box-shadow: 0px 0px 3px gray;
+	display: none;
+}
+
+button:disabled {
+	opacity: .5;
+}

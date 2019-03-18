@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>메인</title>
+	<link rel="stylesheet" href="./css/css.css">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head">
+			<h1>
+				<a href="./index.html">YEOSU STREAMING</a>
+			</h1>
+		</div>
+		<div class="search">
+			<div>
+				<input type="text" placeholder="검색">
+				<button><img src="./images/search.png" alt="icon"></button>
+			</div>
+		</div>
+		<div id="user">
+			<a href="./join.html" class="page  login-tag no-login">회원가입</a>
+			<a href="./login.html" class="page login-tag no-login">로그인</a>
+			<span class='page logout login-tag yes-login'>로그아웃</span>
+			<a class='user login-tag yes-login go-user' href='./user.html'>
+				<img src='./images/image.jpg' alt='profile' class='profile'>
+			</a>
+		</div>
+
+	</header>
+	<div id="main">
+		<div>
+			<h2>인기 영상</h2>
+			<div class="first-video">
+			</div>
+			<div class="etc-video">
+			</div>
+		</div>
+	</div>
+	<div id="cus_vi">
+		<div>
+			<p>맞춤 동영상</p>
+			<div class="video-list">
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>COPYRIGHT ⓒ WEBSKILLS. ALL RIGHTS RESERVED</p>
+	</footer>
+
+	<script type="text/javascript">
+		Storage.open("list").done(() => {
+			Storage.getTable("video").done((videos) => {
+				if(videos.length == 0) {
+					$(".first-video").html("영상이 없습니다.");
+					$(".video-list").html("영상이 없습니다.");
+					return false;
+				};
+
+				shuffle(videos);
+				var random_videos = [...videos].slice(0, 8);
+				viewVideo(random_videos, $(".video-list"));
+
+				var counting = 0;
+
+				$.each(videos, (idx, video) => {
+					getLike(video.idx).done((like) => {
+						video.like = like.like.length;
+						counting++;
+
+						if(counting == videos.length) {
+							viewNiceVideo(videos);
+						};
+					});
+				});
+			});
+		});
+
+		function viewNiceVideo(videos) {
+			videos.sort((a, b) => {
+				return a.like > b.like ? -1 : 1;
+			});
+
+			var like_videos = [...videos].slice(0, 5);
+
+
+			if(like_videos.length != 1) {
+				$(".etc-video").append("<div></div>");
+			};
+
+			$.each(like_videos, (idx, video) => {
+				if(idx == 0) {
+					$.when(
+						getFollow(video.id),
+						getHit(video.idx)
+					).done((follow, hit) => {
+						$(".first-video").html(`
+							<img src="./images/gold_crown.png" alt="gold_crown" class="gold_crown">
+							<div class="video">
+								<video src="${URL.createObjectURL(video.video)}" id="main_video"></video>
+								<div class="video_btn">
+									<img src="./images/play.png" alt="video_icon" class="play play_">
+									<img src="./images/pause.png" alt="video_icon" class="pause play_">
+									<img src="./images/volume.png" alt="video_icon" class="volume volume_">
+									<img src="./images/volume_off.png" alt="video_icon" class="volume_off volume_">
+									<input type="range" class="volume_change" max="100" min="0" />
+									<div type="range" id="progress" value="0">
+										<div id="progress-bar" style="background:linear-gradient(to right, lightgreen, lightblue); width: 0%; height: 100%; margin: 0;"></div>
+									</div>
+									<span><span class="now_time">0:0</span>&nbsp;/&nbsp;<span class="full_time">0:0</span></span>
+								</div>
+							</div>
+							<div class="video_contents">
+								<div>
+									<a href="./user.html?id=${video.id}">
+										<div class="user_icon">
+											
+										</div>
+										<div class="user_name">
+											<p class="user_name_">${video.name}</p>
+											<p>팔로워 <span class="follow_count">${(follow.length).toLocaleString()}</span>명</p>
+										</div>
+									</a>
+								</div>	
+								<div>
+									<div class="video_title">
+										<a href="./video.html">${video.title} - ${video.name}</a>
+									</div>
+									<div class="lookup">조회수 <span>${hit.length.toLocaleString()}</span>회</div>
+									<div class="video_contents_">${video.content}</div>
+								</div>			
+							</div>
+						`);
+
+						Video.videoSet($("#main_video"));
+					})
+				} else {
+					var $video_rank = $("<div></div>", {
+						class : "video_rank",
+					})
+
+					if(idx == 2) {
+						$video_rank.append(`<img src="./images/silver_crown.png" alt="icon">`);
+					} else if(idx == 3) {
+						$video_rank.append(`<img src="./images/bronze_crown.png" alt="icon">`);
+					};
+
+					$video_rank.append(`
+						<a href="./video.html?video=${video.idx}">
+							<img src="${URL.createObjectURL(video.image)}" alt="image">
+						</a>
+					`);
+
+					$(".etc-video").append($video_rank);
+				};
+			});
+			if(like_videos.length != 1) {
+				$(".etc-video").append("<div></div>");
+			};
+		};
+	</script>
+</body>
+</html>
