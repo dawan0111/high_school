@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>웹 에디터</title>
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<!-- start page -->
+	<div id="start">
+		<div class="popup">
+			<div class="title">
+				<span>웹</span> 페이지
+			</div>
+			<button id="makeWebBtn">제작하기</button>
+		</div>
+
+		<div class="menuBtn">
+			<i class="fa fa-bars" id="openList"></i>
+		</div>
+		
+		<div id="saveList">
+			<div class="title">완성한 사이트 목록 <span id="closeList">&times;</span></div>
+
+			<div id="sortBox">
+				<select id="sort">
+					<option value="date">생성일</option>
+					<option value="name">이름</option>
+				</select>
+				<select id="order">
+					<option value="desc">내림차순</option>
+					<option value="asc">오름차순</option>
+				</select>
+			</div>
+
+			<div class="listBox">	
+				<div class="list">
+					<div class="content">
+						<div class="imgBox">
+							<a href="#"><img src="image/img1.png" alt=""></a>
+						</div>
+						<div class="info">
+							<div class="title">
+								<a href="#">여수 웹 에디터</a>
+							</div>
+							<div class="des">
+								웹페이지를 제작하는 웹페이지!
+							</div>
+							<div class="createDate">
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+								<span class="date">2018-05-06 12:24:48</span>
+							</div>
+						</div>
+					</div>
+					<div class="menuBox">
+						<div class="editBtn left">
+							<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+						</div>
+						<div class="options left">
+							<div class="btn btn-sm btn-danger delete">삭제 <i class="fa fa-trash"></i></div>
+							<div class="btn btn-sm btn-primary htmlDownload">html 다운로드 <i class="fa fa-download"></i></div>
+							<div class="btn btn-sm btn-primary thumbDownload">썸네일 다운로드 <i class="fa fa-download"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //start page -->
+
+	<!-- makeView -->
+	<div id="makeView">
+		<div id="leftMenu">
+			<div class="btnBlock" data-type="home"><i class="fa fa-home" style="padding-left: 5px;" aria-hidden="true"></i></div>
+			<div class="btnBlock" data-type="move"><i class="fa fa-mouse-pointer" style="padding-left: 5px;" aria-hidden="true"></i></div>
+			<div class="btnBlock" data-type="text">T</div>
+			<div class="btnBlock" data-type="shape"><i class="fa fa-cube"></i></div>
+			<div class="btnBlock" data-type="crop"><i class="fa fa-crop"></i></div>
+			<div class="btnBlock" data-type="save"><i class="fa fa-floppy-o" aria-hidden="true"></i></div>
+			<div class="btnBlock" data-type="delete"><i class="fa fa-trash" aria-hidden="true"></i></div>
+		</div>
+		<div id="makeLayer"></div>
+	</div>
+	<!-- //makeView -->
+
+	<!-- back layer -->
+	<div id="back"></div>
+	<!-- //back layer -->
+
+	<!-- save popup -->
+	<div id="popup">
+		<div class="panel" id="saveWebPage">
+			<div class="panel-heading">
+				웹 페이지 저장하기
+			</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<span>이름</span>
+					<input type="text" id="name" class="form-control" placeholder="웹 페이지 이름">
+				</div>
+				<div class="form-group">
+					<span>설명</span>
+					<input type="text" id="info" class="form-control" placeholder="설명">
+				</div>
+				<div class="form-group">
+					<div class="btn btn-primary right" id="save-btn">저장</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //save popup -->
+	
+	<!-- element Option -->
+	<div class="elementOption">
+		<div class="colorSelect">
+			<canvas class="colorSelectView" width="200" height="120"></canvas>
+		</div>
+		<div class="colorOption">
+			<div>
+				<input class="color hue" type="range" value="359" min='0' max="359">
+			</div>
+		</div>
+		<div class="colorOption2">
+			<div>
+				<input class="alpha" type="range" value="100" max="100" min="0">
+			</div>
+		</div>
+		<div class="option">
+			<div class="box shape-box" data-type="backgroundColor">
+				배경색 <div class="currentColor"></div>
+			</div>
+			<div class="box shape-box" data-type="borderColor">
+				테두리색 <div class="currentColor"></div>
+			</div>
+			<div class="box shape-box">
+				테두리 굵기 
+				<select class="borderSize">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+				</select>
+			</div>
+			<div class="box text-box" data-type="color">
+				글씨 색깔 <div class="currentColor"></div>
+			</div>
+			<div class="box text-box">
+				글씨 크기
+				<select class="fontSize">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+				</select>
+			</div>
+			<div class="box text-box">
+				<div class="btn btn-default createLink link-btn">링크로 전환하기</div>
+				<div class="btn btn-default unlink link-btn">링크 제거하기</div>
+			</div>
+		</div>
+	</div>
+	<!-- //element Option -->
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
